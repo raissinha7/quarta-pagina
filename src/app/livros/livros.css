@@ -1,0 +1,191 @@
+.pagina-livros {
+  min-height: 100vh;
+  background: #f5fbfc;
+  padding: 30px 40px 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* TÍTULO */
+
+.pagina-livros h1 {
+  color: #183b47;
+  font-size: 30px;
+  margin: 0 0 6px;
+}
+
+.subtitulo {
+  color: #7b8589;
+  font-size: 14px;
+  margin: 0 0 30px;
+}
+
+/* GRID DOS LIVROS */
+
+.grade-livros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 24px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARD */
+
+.card-livro {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-livro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* CAPA */
+
+.card-livro img {
+  display: block;
+
+  width: 100%;
+  height: 230px;
+
+  object-fit: contain;
+
+  background: #eef7f8;
+
+  border-radius: 12px;
+}
+
+/* INFORMAÇÕES */
+
+.info-livro {
+  padding: 4px 2px 0;
+}
+
+.info-livro h2 {
+  color: #183b47;
+  font-size: 17px;
+  line-height: 1.3;
+
+  margin: 12px 0 6px;
+
+  min-height: 44px;
+}
+
+.info-livro p {
+  color: #68777d;
+  font-size: 13px;
+  line-height: 1.4;
+
+  margin: 6px 0;
+}
+
+/* CATEGORIA */
+
+.info-livro span {
+  display: inline-block;
+
+  background: #d9eef2;
+  color: #155564;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  margin: 5px 0;
+}
+
+/* BOTÃO */
+
+.info-livro button {
+  width: 100%;
+  height: 40px;
+
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #155564;
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.info-livro button:hover {
+  background: #104653;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .grade-livros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+  .pagina-livros {
+    padding: 22px 16px 40px;
+  }
+
+  .grade-livros {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .card-livro {
+    padding: 10px;
+  }
+
+  .card-livro img {
+    height: 190px;
+  }
+
+  .info-livro h2 {
+    font-size: 14px;
+    min-height: 36px;
+  }
+
+  .info-livro p {
+    font-size: 12px;
+  }
+
+  .info-livro button {
+    height: 38px;
+    font-size: 11px;
+  }
+}
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 400px) {
+
+  .grade-livros {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .card-livro img {
+    height: 170px;
+  }
+}
+
+  

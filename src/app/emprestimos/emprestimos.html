@@ -1,0 +1,67 @@
+<div class="pagina">
+
+  <h1>Meus Empréstimos</h1>
+
+  @if (livrosEmprestados.length === 0) {
+
+    <div class="vazio">
+
+      <h2>Nenhum livro selecionado</h2>
+
+      <p>
+        Escolha um livro para realizar um empréstimo.
+      </p>
+
+      <a routerLink="/livros">
+        Ver livros
+      </a>
+
+    </div>
+
+  } @else {
+
+    <div class="lista">
+
+      @for (livro of livrosEmprestados; track livro.id) {
+
+        <div class="livro">
+
+          <img
+            [src]="livro.capa"
+            [alt]="livro.titulo"
+          >
+
+          <div>
+
+            <h2>
+              {{ livro.titulo }}
+            </h2>
+
+            <p>
+              {{ livro.autor }}
+            </p>
+
+            <button
+              (click)="removerLivro(livro.id)"
+            >
+              Remover
+            </button>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+    <button
+      class="continuar"
+      (click)="continuar()"
+    >
+      Continuar empréstimo
+    </button>
+
+  }
+
+</div>

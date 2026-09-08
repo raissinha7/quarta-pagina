@@ -1,0 +1,34 @@
+<div class="auth-container">
+
+  <div class="auth-card">
+
+    <h1>Quarta Página</h1>
+
+    <h2>Entrar</h2>
+
+    <p>Entre para acessar a biblioteca.</p>
+
+    <input
+      type="email"
+      placeholder="E-mail"
+      [(ngModel)]="email"
+    >
+
+    <input
+      type="password"
+      placeholder="Senha"
+      [(ngModel)]="senha"
+    >
+
+    <button (click)="entrar()">
+      Entrar
+    </button>
+
+    <p>
+      Ainda não possui uma conta?
+      <a routerLink="/cadastro">Cadastre-se</a>
+    </p>
+
+  </div>
+
+</div>

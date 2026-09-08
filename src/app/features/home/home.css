@@ -1,0 +1,176 @@
+.home {
+  min-height: 100vh;
+  background: #f3fbff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.menu,
+.icone {
+  font-size: 25px;
+  color: #1677b8;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1677b8;
+  letter-spacing: 1px;
+}
+
+/* BOAS-VINDAS */
+.boas-vindas p {
+  color: #6b7280;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.boas-vindas h1 {
+  font-size: 30px;
+  color: #123b52;
+  margin: 0 0 22px;
+}
+
+/* BUSCA */
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 13px 16px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 28px;
+}
+
+.busca input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* CATEGORIAS */
+.home h3 {
+  color: #123b52;
+  margin-bottom: 14px;
+}
+
+.categorias {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 25px;
+}
+
+.categorias button {
+  border: none;
+  background: white;
+  color: #1677b8;
+  padding: 10px 17px;
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.categorias button:hover {
+  background: #1677b8;
+  color: white;
+}
+
+/* BANNER */
+.banner {
+  background: #ccefff;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.banner h2 {
+  color: #123b52;
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.banner p {
+  color: #527080;
+  margin-bottom: 0;
+}
+
+/* TÍTULO DOS LIVROS */
+.titulo-livros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.titulo-livros h3 {
+  margin: 0;
+}
+
+.titulo-livros a {
+  color: #1677b8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* LIVROS */
+.livros-destaque {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.livro {
+  min-width: 140px;
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.livro img {
+  width: 140px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.livro p {
+  color: #123b52;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 3px 3px;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+  .home {
+    padding: 18px;
+  }
+
+  .boas-vindas h1 {
+    font-size: 26px;
+  }
+
+  .livro {
+    min-width: 130px;
+  }
+
+  .livro img {
+    width: 130px;
+    height: 180px;
+  }
+}

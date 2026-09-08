@@ -1,0 +1,52 @@
+<div class="pagina-favoritos">
+
+  <h1>❤️ Meus Favoritos</h1>
+
+  <p class="subtitulo">
+    Livros que você marcou como favoritos
+  </p>
+
+  @if (favoritos().length === 0) {
+
+    <div class="vazio">
+      <p>Você ainda não adicionou nenhum livro aos favoritos.</p>
+
+      <a routerLink="/livros">
+        Ver livros
+      </a>
+    </div>
+
+  } @else {
+
+    <div class="grade-livros">
+
+      @for (livro of favoritos(); track livro.id) {
+
+        <div class="card-livro">
+
+          <img
+            [src]="livro.capa"
+            [alt]="livro.titulo"
+          >
+
+          <h2>{{ livro.titulo }}</h2>
+
+          <p>
+            <strong>Autor:</strong> {{ livro.autor }}
+          </p>
+
+          <span>{{ livro.categoria }}</span>
+
+          <button (click)="removerFavorito(livro.id)">
+            💔 Remover dos favoritos
+          </button>
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+
+</div>
