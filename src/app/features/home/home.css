@@ -59,20 +59,20 @@
   font-size: 14px;
 }
 
-/* CATEGORIAS */
+/* GÊNEROS */
 .home h3 {
   color: #123b52;
   margin-bottom: 14px;
 }
 
-.categorias {
+.generos {
   display: flex;
   gap: 10px;
   overflow-x: auto;
   margin-bottom: 25px;
 }
 
-.categorias button {
+.generos button {
   border: none;
   background: white;
   color: #1677b8;
@@ -82,7 +82,7 @@
   cursor: pointer;
 }
 
-.categorias button:hover {
+.generos button:hover {
   background: #1677b8;
   color: white;
 }
