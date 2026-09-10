@@ -1,0 +1,42 @@
+<!-- Botão que fica fixo na tela para abrir o menu -->
+<button class="btn-abrir" (click)="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Fundo escuro que aparece quando o menu abre -->
+<!-- Ele fecha o menu se clicar nele -->
+@if (menuAberto) {
+  <div class="overlay" (click)="toggleMenu()"></div>
+}
+
+<!-- O Menu Lateral em si -->
+<!-- A classe 'aberto' só é adicionada se a variável menuAberto for true -->
+<nav class="menu-lateral" [class.aberto]="menuAberto">
+  
+  <!-- Botão para fechar (X) dentro do menu -->
+  <button class="btn-fechar" (click)="toggleMenu()">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <ul>
+    <li>
+      <!-- O (click)="toggleMenu()" aqui faz o menu fechar sozinho ao clicar no link -->
+      <a routerLink="/favoritos" routerLinkActive="ativo" (click)="toggleMenu()">
+        <i class="fas fa-star"></i>
+        <span class="texto-menu">Favoritos</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/cadastro" routerLinkActive="ativo" (click)="toggleMenu()">
+        <i class="fas fa-user-plus"></i>
+        <span class="texto-menu">Cadastro</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/emprestimos" routerLinkActive="ativo" (click)="toggleMenu()">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span class="texto-menu">Empréstimos</span>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -2,7 +2,7 @@ export interface Livro {
     id: number;
     titulo: string;
     autor: string;
-    categoria: string;
+    genero: string;
     descricao: string;
     capa: string;
     favorito: boolean;

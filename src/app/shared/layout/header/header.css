@@ -1,6 +1,6 @@
 .topo {
   height: 65px;
-  background: #ffffff;
+  background: #b2e0ff;
 
   display: flex;
   align-items: center;
@@ -25,7 +25,34 @@
   font-weight: bold;
   letter-spacing: 2px;
 }
+/* Estilo geral do header (fundo, espaçamento) */
+.meu-header {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Uma sombrinha leve debaixo do header */
+}
 
+/* O contêiner que segura a imagem e o texto */
+.marca {
+  display: flex;
+  align-items: center; /* Centraliza a logo e o texto na vertical */
+  gap: 15px; /* Espaço entre a logo e o texto */
+}
+
+/* Controle do tamanho da logo */
+.logo-pequena {
+  width: 40px; /* Ajuste esse valor para deixar a logo maior ou menor */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 5px; /* Opcional: arredonda as pontas da imagem */
+}
+
+/* Estilo da frase */
+.frase-header {
+  margin: 0; /* Remove a margem padrão do H1 */
+  font-size: 20px;
+  color: #2c3e50;
+  font-weight: bold;
+}
 nav {
   display: flex;
   align-items: center;

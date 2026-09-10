@@ -38,14 +38,11 @@
   letter-spacing: 2px;
 }
 
-
+}
 /* =========================
    BOAS-VINDAS
 ========================= */
 
-.boas-vindas {
-  margin-bottom: 20px;
-}
 
 .boas-vindas p {
   color: #607d84;
@@ -154,7 +151,7 @@
   font-size: 19px;
 }
 
-.categorias {
+.generos {
   display: flex;
   gap: 12px;
 

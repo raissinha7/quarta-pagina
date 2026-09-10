@@ -10,18 +10,28 @@
   width: 100%;
   max-width: 380px;
   margin: 50px auto;
+  text-aligh: center;
 }
 
 .login h1 {
   font-size: 30px;
   margin: 0 0 8px;
   color: #183b47;
+  text-align: center;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 100vh;
 }
 
 .subtitulo {
   font-size: 14px;
   color: #777;
   margin-bottom: 35px;
+  text-align: center;
 }
 
 form {
@@ -186,4 +196,10 @@ label {
 
 .cadastro button:hover {
   text-decoration: underline;
+}
+/* ESTILO DA LOGO ACIMA DO FORMULÁRIO */
+.logo-login {
+  display: block;      
+  margin: 0 auto 25px;    
+  height: auto;            
 }

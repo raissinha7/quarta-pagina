@@ -15,7 +15,7 @@ export class AdicionarLivros {
 
 titulo = '';
   autor = '';
-  categoria = '';
+  genero = '';
   descricao = '';
   capa = '';
 
@@ -24,7 +24,7 @@ titulo = '';
       id: 0,
       titulo: this.titulo,
       autor: this.autor,
-      categoria: this.categoria,
+      genero: this.genero,
       descricao: this.descricao,
       capa: this.capa,
       favorito: false,

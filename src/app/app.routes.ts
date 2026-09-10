@@ -6,7 +6,8 @@ import { LivrosComponent } from './livros/livros';
 import { FavoritosComponent } from './features/favoritos/favoritos';
 import { AdicionarLivros } from './features/adicionar-livros/adicionar-livros';
 import { Cadastro } from './features/cadastro/cadastro';
-import { EmprestimosComponent } from './emprestimos/emprestimos';
+import { Emprestimos } from './emprestimos/emprestimos';
+import { Menu } from './features/menu/menu';
 
 // AUTH GUARD
 import { authGuard } from './core/guards/auth-guard';
@@ -33,6 +34,11 @@ export const routes: Routes = [
 
   // PRECISA estar logado
   {
+    path: 'menu',
+    component: Menu
+  },
+
+  {
     path: 'home',
     component: Home,
     canActivate: [authGuard]
@@ -58,7 +64,7 @@ export const routes: Routes = [
 
   {
     path: 'emprestimos',
-    component: EmprestimosComponent,
+    component: Emprestimos,
     canActivate: [authGuard]
   },
 
