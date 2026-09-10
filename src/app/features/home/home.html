@@ -11,19 +11,31 @@
   </section>
 
   <div class="busca">
-    🔍
-    <input type="text" placeholder="Buscar um livro...">
-  </div>
+  <span>🔍</span>
+
+  <input
+    #termoPesquisa
+    type="text"
+    placeholder="Buscar um livro..."
+    (keyup.enter)="pesquisar(termoPesquisa.value)"
+  >
+
+  <button
+    type="button"
+    (click)="pesquisar(termoPesquisa.value)">
+    Pesquisar
+  </button>
+</div>
 
   <h3>Gêneros</h3>
 
-  <div class="generos">
-    <button>Romance</button>
-    <button>Ficção</button>
-    <button>Suspense</button>
-    <button>Fantasia</button>
-    <button>Educação</button>
-  </div>
+  <div class="categorias">
+  <button (click)="irParaLivros()">Romance</button>
+  <button (click)="irParaLivros()">Ficção</button>
+  <button (click)="irParaLivros()">Suspense</button>
+  <button (click)="irParaLivros()">Fantasia</button>
+  <button (click)="irParaLivros()">Educação</button>
+</div>
 
   <div class="banner">
     <h2>Encontre sua próxima leitura</h2>
@@ -37,17 +49,17 @@
 
   <div class="livros-destaque">
 
-    <div class="livro">
+    <div class="livro" (click)="irParaLivros()">
       <img src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg">
       <p>O Pequeno Príncipe</p>
     </div>
 
-    <div class="livro">
+    <div class="livro" (click)="irParaLivros()">
       <img src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg">
       <p>Harry Potter</p>
     </div>
 
-    <div class="livro">
+    <div class="livro" (click)="irParaLivros()">
       <img src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg">
       <p>Dom Casmurro</p>
     </div>

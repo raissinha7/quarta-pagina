@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Auth } from '../../../services/auth';
+import { Auth } from '../../../core/services/auth';
 
 @Component({
   selector: 'app-login',
@@ -18,22 +18,32 @@ export class Login {
   senha = '';
 
   entrar() {
-    const sucesso = this.auth.login(this.email, this.senha);
+
+    const sucesso = this.auth.login(
+      this.email,
+      this.senha
+    );
 
     if (sucesso) {
+
       this.router.navigate(['/home']);
+
     } else {
+
       alert('E-mail ou senha incorretos!');
+
     }
   }
 
   esqueciSenha() {
-    alert('Entre em contato com a biblioteca para recuperar sua senha.');
+    alert(
+      'Entre em contato com a biblioteca para recuperar sua senha.'
+    );
   }
 
   cadastrar() {
-  this.router.navigate(['/cadastro']);
-}
+    this.router.navigate(['/cadastro']);
+  }
 
   loginGoogle() {
     alert('Login com Google será adicionado em breve.');
@@ -42,4 +52,5 @@ export class Login {
   loginFacebook() {
     alert('Login com Facebook será adicionado em breve.');
   }
+
 }

@@ -1,55 +1,45 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-
-  private loggedIn = signal<boolean>(
-    localStorage.getItem('usuarioLogado') === 'true'
-  );
-
-  isLoggedIn() {
-    return this.loggedIn();
-  }
+export class Auth {
 
   login(email: string, senha: string): boolean {
 
-    const usuarioSalvo = localStorage.getItem('usuario');
+    const dados = localStorage.getItem('usuarioCadastro');
 
-    if (!usuarioSalvo) {
+    if (!dados) {
       return false;
     }
 
-    const usuario = JSON.parse(usuarioSalvo);
+    const usuario = JSON.parse(dados);
 
-    if (usuario.email === email && usuario.senha === senha) {
-      this.loggedIn.set(true);
+    const emailCorreto =
+      usuario.email.trim().toLowerCase() ===
+      email.trim().toLowerCase();
+
+    const senhaCorreta =
+      usuario.senha === senha;
+
+    if (emailCorreto && senhaCorreta) {
+
       localStorage.setItem('usuarioLogado', 'true');
+
       return true;
     }
 
     return false;
   }
 
-  cadastrar(nome: string, email: string, senha: string): boolean {
 
-    const usuario = {
-      nome,
-      email,
-      senha
-    };
-
-    localStorage.setItem('usuario', JSON.stringify(usuario));
-
-    this.loggedIn.set(true);
-    localStorage.setItem('usuarioLogado', 'true');
-
-    return true;
-  }
-
-  logout() {
-    this.loggedIn.set(false);
+  logout(): void {
     localStorage.removeItem('usuarioLogado');
   }
+
+
+  estaLogado(): boolean {
+    return localStorage.getItem('usuarioLogado') === 'true';
+  }
+
 }

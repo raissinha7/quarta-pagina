@@ -9,6 +9,9 @@ import { Cadastro } from './features/cadastro/cadastro';
 import { Emprestimos } from './emprestimos/emprestimos';
 import { Menu } from './features/menu/menu';
 
+// AUTH GUARD
+import { authGuard } from './core/guards/auth-guard';
+
 export const routes: Routes = [
 
   {
@@ -17,11 +20,19 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
 
+  // NÃO precisa estar logado
   {
     path: 'login',
     component: Login
   },
 
+  // NÃO precisa estar logado
+  {
+    path: 'cadastro',
+    component: Cadastro
+  },
+
+  // PRECISA estar logado
   {
     path: 'menu',
     component: Menu
@@ -29,29 +40,38 @@ export const routes: Routes = [
 
   {
     path: 'home',
-    component: Home
+    component: Home,
+    canActivate: [authGuard]
   },
 
   {
     path: 'livros',
-    component: LivrosComponent
+    component: LivrosComponent,
+    canActivate: [authGuard]
   },
 
   {
     path: 'favoritos',
-    component: FavoritosComponent
+    component: FavoritosComponent,
+    canActivate: [authGuard]
   },
 
   {
     path: 'adicionar',
-    component: AdicionarLivros
+    component: AdicionarLivros,
+    canActivate: [authGuard]
   },
+
   {
-  path: 'cadastro',
-  component: Cadastro
-},
-{
-  path: 'emprestimos',
-  component: Emprestimos
-},
+    path: 'emprestimos',
+    component: Emprestimos,
+    canActivate: [authGuard]
+  },
+
+  // Se escrever uma rota que não existe
+  {
+    path: '**',
+    redirectTo: 'login'
+  }
+
 ];

@@ -13,7 +13,6 @@ import { Livros } from '../services/livros';
 export class Emprestimos {
 
   private livrosService = inject(Livros);
-  private router = inject(Router);
 
   get livrosEmprestados(): Livro[] {
     return this.livrosService.emprestimos();
@@ -21,14 +20,5 @@ export class Emprestimos {
 
   removerLivro(id: number) {
     this.livrosService.removerEmprestimo(id);
-  }
-
-  continuar() {
-    if (this.livrosEmprestados.length === 0) {
-      alert('Você ainda não selecionou nenhum livro.');
-      return;
-    }
-
-    this.router.navigate(['/checkout']);
   }
 }
