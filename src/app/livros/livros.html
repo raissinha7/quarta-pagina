@@ -1,18 +1,32 @@
 <div class="pagina-livros">
-    <h1> Quarta Pagina </h1>
-    <p class="Subtitulo"> Encontre seu próximo livro favorito </p>
-</div>
+    <h1>Quarta Pagina</h1>
+    <p class="Subtitulo">Encontre seu próximo livro favorito</p>
 
-@for (livro of livros(); track livro.id){
+    <div class="grade-livros">
 
-    <div class="card-livro">
-        <img [src]="livro.capa" [alt]="livro.titulo">
-        <h2> {{livro.titulo}} </h2>
-        <p><strong>Autor:</strong> {{livro.autor}} </p>
-        <span>{{livro.categoria}}</span>
-        <p> {{livro.descricao}} </p>
-        <button (click)="favoritar(livro.id)"> {{livro.favorito ? 'Favorito' : 'Favoritar'}} </button>
-        <button (click)="emprestar(livro)">Emprestimo</button>
+        @for (livro of livros(); track livro.id) {
+
+            <div class="card-livro">
+                <img [src]="livro.capa" [alt]="livro.titulo">
+
+                <h2>{{livro.titulo}}</h2>
+
+                <p><strong>Autor:</strong> {{livro.autor}}</p>
+
+                <span>{{livro.categoria}}</span>
+
+                <p>{{livro.descricao}}</p>
+
+                <button (click)="favoritar(livro.id)">
+                    {{livro.favorito ? 'Favorito' : 'Favoritar'}}
+                </button>
+
+                <button (click)="emprestar(livro)">
+                    Empréstimo
+                </button>
+            </div>
+
+        }
+
     </div>
-
-    }
+</div>

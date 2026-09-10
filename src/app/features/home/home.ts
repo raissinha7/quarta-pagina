@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +8,22 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home {
-  
+
+  private router = inject(Router);
+
+  irParaLivros() {
+    this.router.navigate(['/livros']);
+  }
+
+  buscarLivro(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const busca = input.value.trim();
+
+    if (busca) {
+      this.router.navigate(['/livros'], {
+        queryParams: { busca: busca }
+      });
+    }
+  }
+
 }
