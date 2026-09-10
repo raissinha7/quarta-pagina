@@ -11,13 +11,21 @@
     <h1>O que você quer ler hoje?</h1>
   </section>
 
- <div class="busca">
-  🔍
+  <div class="busca">
+  <span>🔍</span>
+
   <input
+    #termoPesquisa
     type="text"
     placeholder="Buscar um livro..."
-    (keyup.enter)="buscarLivro($event)"
+    (keyup.enter)="pesquisar(termoPesquisa.value)"
   >
+
+  <button
+    type="button"
+    (click)="pesquisar(termoPesquisa.value)">
+    Pesquisar
+  </button>
 </div>
 
   <h3>Categorias</h3>

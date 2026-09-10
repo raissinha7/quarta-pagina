@@ -51,7 +51,7 @@ export class LivrosComponent {
 
   emprestar(livro: Livro) {
     this.livrosService.adicionarEmprestimo(livro);
-    this.router.navigate(['/emprestimos']);
+    this.router.navigate(['/emprestimo']);
   }
 
 }

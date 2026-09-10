@@ -8,22 +8,18 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home {
-
   private router = inject(Router);
-
   irParaLivros() {
     this.router.navigate(['/livros']);
   }
 
-  buscarLivro(event: Event) {
-    const input = event.target as HTMLInputElement;
-    const busca = input.value.trim();
+    pesquisar(termo: string) {
+    const busca = termo.trim();
 
-    if (busca) {
+    if (busca !== '') {
       this.router.navigate(['/livros'], {
         queryParams: { busca: busca }
       });
     }
   }
-
 }
