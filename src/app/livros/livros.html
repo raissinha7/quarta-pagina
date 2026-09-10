@@ -8,7 +8,7 @@
         <img [src]="livro.capa" [alt]="livro.titulo" />
         <h2>{{ livro.titulo }}</h2>
         <p><strong>Autor:</strong> {{ livro.autor }}</p>
-        <span>{{ livro.categoria }}</span>
+        <span>{{ livro.genero }}</span>
         <p>{{ livro.descricao }}</p>
         <button (click)="favoritar(livro.id)">
           {{ livro.favorito ? 'Favorito' : 'Favoritar' }}
