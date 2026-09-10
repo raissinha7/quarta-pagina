@@ -3,7 +3,7 @@
     <p class="Subtitulo"> Encontre seu próximo livro favorito </p>
 </div>
 
-@for (livro of livros(); track livro.id){
+@for (livro of livrosFiltrados; track livro.id) {
 
     <div class="card-livro">
         <img [src]="livro.capa" [alt]="livro.titulo">
@@ -14,5 +14,7 @@
         <button (click)="favoritar(livro.id)"> {{livro.favorito ? 'Favorito' : 'Favoritar'}} </button>
         <button (click)="emprestar(livro)">Emprestimo</button>
     </div>
+          } @empty {
+          <p>Nenhum livro encontrado.</p>
 
     }

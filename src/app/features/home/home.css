@@ -1,160 +1,348 @@
 .home {
   min-height: 100vh;
-  background: #f3fbff;
-  padding: 20px;
+  background: #f4f9fa;
+  padding: 25px;
   font-family: Arial, sans-serif;
+  color: #12343d;
 }
 
-/* TOPO */
+/* =========================
+   TOPO
+========================= */
+
 .topo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .menu,
 .icone {
-  font-size: 25px;
-  color: #1677b8;
+  font-size: 26px;
+  color: #0f4c5c;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu:hover,
+.icone:hover {
+  color: #083b49;
+  transform: scale(1.1);
 }
 
 .logo {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
-  color: #1677b8;
-  letter-spacing: 1px;
+  color: #0f4c5c;
+  letter-spacing: 2px;
 }
 
-/* BOAS-VINDAS */
+
+/* =========================
+   BOAS-VINDAS
+========================= */
+
+.boas-vindas {
+  margin-bottom: 20px;
+}
+
 .boas-vindas p {
-  color: #6b7280;
-  margin-bottom: 5px;
-  font-size: 15px;
+  color: #607d84;
+  margin-bottom: 6px;
+  font-size: 16px;
 }
 
 .boas-vindas h1 {
-  font-size: 30px;
-  color: #123b52;
+  font-size: 32px;
+  color: #083b49;
   margin: 0 0 22px;
 }
 
-/* BUSCA */
+
+/* =========================
+   BUSCA
+========================= */
+
 .busca {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: white;
-  padding: 13px 16px;
-  border-radius: 14px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-  margin-bottom: 28px;
+  gap: 12px;
+
+  background: #ffffff;
+
+  padding: 8px 10px 8px 18px;
+
+  border-radius: 15px;
+
+  border: 1px solid #d8e7ea;
+
+  box-shadow: 0 5px 18px rgba(15, 76, 92, 0.10);
+
+  margin-bottom: 30px;
+
+  transition: 0.3s;
+}
+
+.busca:focus-within {
+  border-color: #0f4c5c;
+
+  box-shadow: 0 5px 20px rgba(15, 76, 92, 0.20);
+}
+
+.busca span {
+  font-size: 19px;
 }
 
 .busca input {
+  flex: 1;
+
   border: none;
   outline: none;
-  width: 100%;
-  font-size: 14px;
+
+  background: transparent;
+
+  padding: 13px 5px;
+
+  font-size: 15px;
+
+  color: #083b49;
 }
 
-/* CATEGORIAS */
+.busca input::placeholder {
+  color: #8a9fa4;
+}
+
+
+/* BOTÃO PESQUISAR */
+
+.busca button {
+  border: none;
+
+  background: #0f4c5c;
+
+  color: white;
+
+  padding: 13px 24px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.busca button:hover {
+  background: #083b49;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(15, 76, 92, 0.25);
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
 .home h3 {
-  color: #123b52;
-  margin-bottom: 14px;
+  color: #083b49;
+  margin-bottom: 15px;
+  font-size: 19px;
 }
 
 .categorias {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+
   overflow-x: auto;
-  margin-bottom: 25px;
-}
 
-.categorias button {
-  border: none;
-  background: white;
-  color: #1677b8;
-  padding: 10px 17px;
-  border-radius: 20px;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.categorias button:hover {
-  background: #1677b8;
-  color: white;
-}
-
-/* BANNER */
-.banner {
-  background: #ccefff;
-  border-radius: 20px;
-  padding: 25px;
   margin-bottom: 30px;
 }
 
+.categorias button {
+  border: 1px solid #d2e4e7;
+
+  background: #ffffff;
+
+  color: #0f4c5c;
+
+  padding: 10px 18px;
+
+  border-radius: 25px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.categorias button:hover {
+  background: #0f4c5c;
+
+  color: #ffffff;
+
+  border-color: #0f4c5c;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 10px rgba(15, 76, 92, 0.18);
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+  background: linear-gradient(
+    135deg,
+    #0f4c5c,
+    #176b7d
+  );
+
+  border-radius: 20px;
+
+  padding: 28px;
+
+  margin-bottom: 35px;
+
+  box-shadow: 0 8px 20px rgba(15, 76, 92, 0.18);
+}
+
 .banner h2 {
-  color: #123b52;
+  color: #ffffff;
+
   margin-top: 0;
-  font-size: 22px;
+
+  margin-bottom: 10px;
+
+  font-size: 24px;
 }
 
 .banner p {
-  color: #527080;
+  color: #e5f2f4;
+
   margin-bottom: 0;
+
+  font-size: 15px;
 }
 
-/* TÍTULO DOS LIVROS */
+
+/* =========================
+   TÍTULO DOS LIVROS
+========================= */
+
 .titulo-livros {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+
+  margin-bottom: 18px;
 }
 
 .titulo-livros h3 {
   margin: 0;
+  color: #083b49;
 }
 
 .titulo-livros a {
-  color: #1677b8;
+  color: #0f4c5c;
+
   text-decoration: none;
+
   font-size: 14px;
+  font-weight: bold;
 }
 
-/* LIVROS */
+.titulo-livros a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   LIVROS
+========================= */
+
 .livros-destaque {
   display: flex;
-  gap: 18px;
+
+  gap: 20px;
+
   overflow-x: auto;
-  padding-bottom: 15px;
+
+  padding: 5px 5px 20px;
 }
 
 .livro {
-  min-width: 140px;
-  background: white;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  min-width: 150px;
+
+  background: #ffffff;
+
+  padding: 11px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e0edef;
+
+  box-shadow: 0 5px 16px rgba(15, 76, 92, 0.10);
+
+  transition: 0.3s;
+}
+
+.livro:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 25px rgba(15, 76, 92, 0.20);
 }
 
 .livro img {
-  width: 140px;
-  height: 190px;
+  width: 100%;
+
+  height: 195px;
+
   object-fit: cover;
-  border-radius: 10px;
+
+  border-radius: 11px;
 }
 
 .livro p {
-  color: #123b52;
+  color: #083b49;
+
   font-size: 14px;
+
   font-weight: bold;
-  margin: 10px 3px 3px;
+
+  margin: 11px 3px 4px;
 }
 
-/* CELULAR */
+
+/* =========================
+   BARRA DE ROLAGEM
+========================= */
+
+.livros-destaque::-webkit-scrollbar,
+.categorias::-webkit-scrollbar {
+  height: 6px;
+}
+
+.livros-destaque::-webkit-scrollbar-thumb,
+.categorias::-webkit-scrollbar-thumb {
+  background: #9ec4cb;
+  border-radius: 10px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 600px) {
 
   .home {
@@ -162,15 +350,31 @@
   }
 
   .boas-vindas h1 {
-    font-size: 26px;
+    font-size: 27px;
+  }
+
+  .busca {
+    padding: 7px 8px 7px 14px;
+  }
+
+  .busca button {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .banner {
+    padding: 22px;
+  }
+
+  .banner h2 {
+    font-size: 21px;
   }
 
   .livro {
-    min-width: 130px;
+    min-width: 135px;
   }
 
   .livro img {
-    width: 130px;
     height: 180px;
   }
 }
