@@ -12,7 +12,7 @@ export class Livros {
       autor: 'Antoine de Sain-Exupery',
       categoria: 'Fantasia',
       descricao: 'Uma historia sobre amizade, amor e a importancia de enxergar alem das aparencias.',
-      capa: 'https://covers.openlibrary.org/b/title/The%20Prince-L.jpg',
+      capa: 'https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg',
       favorito: false
     },
     {
@@ -30,7 +30,7 @@ export class Livros {
       autor: 'J. K. Rowling',
       categoria: 'Fantasia',
       descricao: 'Harry descobre que e um bruxo e comeca a jornada em Hogwarts.',
-      capa: 'https://covers.openlibrary.org/b/title/Harry%20Potter%20and%20Philosophers%20Stone-L.jpg',
+      capa: 'https://covers.openlibrary.org/b/isbn/9780439708180-L.jpg',
       favorito: false
     },
     {
@@ -48,7 +48,7 @@ export class Livros {
       autor: 'David Flanagan',
       categoria: 'Programação',
       descricao: 'Um Guia completo para aprender JavaScript e desenvolver aplicaçoões para a web.',
-      capa: 'https://covers.openlibrary.org/b/title/JavaScript%20Definitive%20Guide-L.jpg',
+      capa: 'https://covers.openlibrary.org/b/isbn/9780596805524-M.jpg',
       favorito: false
     },
     {
@@ -57,7 +57,7 @@ export class Livros {
       autor: 'Robert C. Martin',
       categoria: 'Programação',
       descricao: 'Um livro sobre boas práticas para escrever códigos mais limpos, organizados e fáceis de manter.',
-      capa: 'https://covers.openlibrary.org/b/title/Clear%20Code-L.jpg',
+      capa: 'https://covers.openlibrary.org/b/title/Clean%20Code-L.jpg',
       favorito: false
     },
     {
@@ -66,7 +66,7 @@ export class Livros {
       autor: 'Thomas H. Cormen',
       categoria: 'Programação',
       descricao: 'Uma introdução aos principais conceitos e técnicas de algoritmos e estruturas de dados.',
-      capa: 'https://covers.openlibrary.org/b/title/Introduction%20Algorithms-L.jgp',
+      capa: 'https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg',
       favorito: false
     },
     {
@@ -84,7 +84,7 @@ export class Livros {
       autor: 'Stephen Hawking',
       categoria: 'História',
       descricao: 'Uma introdução e grandes questões sobre o universo, o tempo e a origem do cosmos.',
-      capa: 'https://covers.openlibrary.org/b/title/A%20Brief%20History%20Time-L.jpg',
+      capa: 'https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg',
       favorito: false
     },
      {

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink,Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,11 @@ import { RouterLink,Router } from '@angular/router';
 })
 export class Home {
   private router = inject(Router);
+  irParaLivros() {
+    this.router.navigate(['/livros']);
+  }
 
-  pesquisar(termo: string) {
+    pesquisar(termo: string) {
     const busca = termo.trim();
 
     if (busca !== '') {
