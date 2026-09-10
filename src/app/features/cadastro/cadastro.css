@@ -1,139 +1,99 @@
-.cadastro-page {
+.auth-container {
   min-height: 100vh;
-  background: #ffffff;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 30px 20px;
-
-  font-family: Arial, sans-serif;
+  background-color: #f5f8fb;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.cadastro-card {
+.auth-card {
   width: 100%;
-  max-width: 380px;
-
-  background: white;
-
-  padding: 30px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  background-color: white;
+  padding: 35px 40px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
 
-.icone {
+/* Título */
+.auth-card h1 {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.cadastro-card h1 {
-  text-align: center;
-
-  color: #183b47;
-
   font-size: 28px;
+  margin: 0 0 25px;
+  color: #34495e;
+}
 
+.auth-card h2 {
+  font-size: 21px;
   margin: 0 0 8px;
+  color: #3d4d5d;
 }
 
-.subtitulo {
-  text-align: center;
-
-  color: #777;
-
+.auth-card p {
   font-size: 14px;
-
-  margin-bottom: 30px;
+  color: #777;
+  margin: 0 0 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  color: #183b47;
-
-  font-size: 13px;
-
-  font-weight: bold;
-
-  margin-bottom: 7px;
-}
-
-input {
+/* Campos */
+.auth-card input {
   width: 100%;
-  height: 48px;
-
+  height: 42px;
+  padding: 0 13px;
+  margin-bottom: 13px;
   box-sizing: border-box;
 
-  border: none;
-
-  background: #f3f5f5;
-
-  border-radius: 10px;
-
-  padding: 0 14px;
-
-  margin-bottom: 18px;
-
+  border: 1px solid #d9dfe5;
+  border-radius: 7px;
   outline: none;
 
   font-size: 14px;
+  color: #333;
+  background-color: #fafafa;
 }
 
-input:focus {
-  box-shadow: 0 0 0 2px #c5e2e8;
+.auth-card input:focus {
+  border-color: #7f9db5;
+  background-color: white;
 }
 
-button[type="submit"] {
+/* Botão */
+.auth-card button {
   width: 100%;
-  height: 50px;
+  height: 42px;
+  margin-top: 5px;
 
   border: none;
+  border-radius: 7px;
 
-  border-radius: 9px;
-
-  background: #155564;
-
+  background-color: #6f91ad;
   color: white;
 
-  font-size: 12px;
-
-  font-weight: bold;
-
-  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
 
   cursor: pointer;
-
-  margin-top: 5px;
 }
 
-button[type="submit"]:hover {
-  background: #104653;
+.auth-card button:hover {
+  background-color: #5d7f9b;
 }
 
-.login-link {
+/* Texto inferior */
+.auth-card p:last-child {
   text-align: center;
-
-  color: #777;
-
-  font-size: 12px;
-
-  margin-top: 25px;
+  margin: 20px 0 0;
 }
 
-.login-link button {
-  border: none;
-  background: none;
+.auth-card a {
+  color: #6f91ad;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-  color: #155564;
-
-  font-weight: bold;
-
-  cursor: pointer;
+.auth-card a:hover {
+  text-decoration: underline;
 }
