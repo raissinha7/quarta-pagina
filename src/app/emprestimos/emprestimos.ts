@@ -10,7 +10,7 @@ import { Livros } from '../services/livros';
   templateUrl: './emprestimos.html',
   styleUrl: './emprestimos.css'
 })
-export class EmprestimosComponent {
+export class Emprestimos {
 
   private livrosService = inject(Livros);
   private router = inject(Router);

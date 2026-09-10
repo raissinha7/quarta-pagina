@@ -24,6 +24,13 @@
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 100vh;
+}
+
 .icone {
   text-align: center;
   font-size: 32px;

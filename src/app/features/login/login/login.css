@@ -18,6 +18,13 @@
   color: #183b47;
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 100vh;
+}
+
 .subtitulo {
   font-size: 14px;
   color: #777;

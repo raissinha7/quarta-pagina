@@ -6,7 +6,8 @@ import { LivrosComponent } from './livros/livros';
 import { FavoritosComponent } from './features/favoritos/favoritos';
 import { AdicionarLivros } from './features/adicionar-livros/adicionar-livros';
 import { Cadastro } from './features/cadastro/cadastro';
-import { EmprestimosComponent } from './emprestimos/emprestimos';
+import { Emprestimos } from './emprestimos/emprestimos';
+import { Menu } from './features/menu/menu';
 
 export const routes: Routes = [
 
@@ -19,6 +20,11 @@ export const routes: Routes = [
   {
     path: 'login',
     component: Login
+  },
+
+  {
+    path: 'menu',
+    component: Menu
   },
 
   {
@@ -46,6 +52,6 @@ export const routes: Routes = [
 },
 {
   path: 'emprestimos',
-  component: EmprestimosComponent
+  component: Emprestimos
 },
 ];
