@@ -103,7 +103,7 @@ export class Livros {
     autor: 'Fernando Pessoa',
     genero: 'Poesia',
     descricao: 'Coletânea essencial que reúne os principais poemas ortônimos e heterônimos do autor (como Álvaro de Campos, Alberto Caeiro e Ricardo Reis), explorando a pluralidade de vozes que marcou a literatura portuguesa.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.57 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfMcZtQhb4u0ra40zHsIEBhbIAvBWu6xMveULGkD1BkflnVcHHe-KpBI&s=10.jpg',
     favorito: false
   },
   {
@@ -112,7 +112,7 @@ export class Livros {
     autor: 'Fernando Pessoa',
     genero: 'Romance/Prosa Poética',
     descricao: 'Escrita sob o semi-heterônimo Bernardo Soares, esta obra é um compilado de fragmentos reflexivos e intimistas que formam uma autobiografia sem fatos e um marco incontestável da prosa modernista.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.57 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEfe9yH7yjzeSKt6Rfal1P7YTJiBV7gPPKveAhkx9ETw&s=10.jpg',
     favorito: false
   },
   {
@@ -121,7 +121,7 @@ export class Livros {
     autor: 'Oscar Wilde',
     genero: 'Romance Gótico',
     descricao: 'Um belo e jovem aristocrata faz um pacto para permanecer eternamente jovem, enquanto um retrato seu mantido escondido envelhece e absorve as marcas de sua vida amoral e de sua degradação moral.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.11 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyl2Sx6WeVZVxaPOEXu-wQ8SWrcbGSfSctMEyjyaLYNg&s=10.jpg',
     favorito: false
   },
   {
@@ -130,7 +130,7 @@ export class Livros {
     autor: 'Emily Brontë',
     genero: 'Romance Gótico',
     descricao: 'A intensa, sombria e trágica história de amor, obsessão e vingança entre o órfão Heathcliff e Catherine Earnshaw, ambientada nas inóspitas e isoladas charnecas inglesas.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.56.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/9154Q7fv5UL._AC_UF1000,1000_QL80_.jpg',
     favorito: false
   },
   {
@@ -139,7 +139,7 @@ export class Livros {
     autor: 'Ivan Turguêniev',
     genero: 'Romance Clássico',
     descricao: 'Clássico da literatura russa que explora de forma brilhante e atemporal o conflito de gerações e de ideologias entre a aristocracia tradicional e os jovens niilistas da Rússia do século XIX.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.00 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvFzOYgkFUXb-qgQAnWVC9xcA_jS_pCjoXiQVi3Q62gA&s.jpg',
     favorito: false
   },
   {
@@ -148,7 +148,7 @@ export class Livros {
     autor: 'Juan Rulfo',
     genero: 'Realismo Mágico',
     descricao: 'O protagonista Juan Preciado viaja à cidade fantasma de Comala em busca de seu pai, Pedro Páramo, encontrando um lugar habitado apenas por ecos, memórias e almas atormentadas. Um marco central do realismo mágico.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.07 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHzivOLxiGF9cUVTJRl2lWhkZrqQphRMs9hT-xMAR_Q&s=10.jpg',
     favorito: false
   },
   {
@@ -157,7 +157,7 @@ export class Livros {
     autor: 'Liev Tolstói',
     genero: 'Romance Clássico',
     descricao: 'Uma vasta e profunda tapeçaria da sociedade russa do século XIX, centrada no trágico romance extraconjugal da aristocrata Anna Kariênina e contrastada com a vida pacata e as buscas morais no campo.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.07 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWKfZeCsB-JM36dg1tI8nZpnlAHiKeeBlNA3suYMd1Oa0Wcxh6vYu3igI-&s=10.jpg',
     favorito: false
   },
   {
@@ -166,7 +166,7 @@ export class Livros {
     autor: 'Liev Tolstói',
     genero: 'Contos',
     descricao: 'Reunião de contos e novelas maduras do autor russo que mergulham em profundos dilemas morais, explorando temas como a tentação, o desejo, a crise de fé e a imensa complexidade da alma humana.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.08 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSGXeGDKKq5WHWLYnBVeNXgMgXgs-M7GxKfAj3cS1ZlA&s=10.jpg',
     favorito: false
   },
   {
@@ -175,7 +175,7 @@ export class Livros {
     autor: 'Gabriel García Márquez',
     genero: 'Realismo Mágico',
     descricao: 'A mágica, trágica e mítica saga da família Buendía e da cidade de Macondo, desde a sua fundação até a sua queda inevitável. É a obra máxima do realismo mágico latino-americano.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.59.jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTgBdo5gSmw-aAVRZ-IbrffCTF4zS2NcbgifyuKZxoQ&s=10.jpg',
     favorito: false
   },
   {
@@ -184,7 +184,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Terror/Suspense',
     descricao: 'O detetive Ralph Anderson investiga o assassinato brutal de uma criança. O principal suspeito tem um álibi perfeito, levando a investigação a desdobramentos cada vez mais sombrios e de natureza sobrenatural.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.14 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9VVNeMvlOSlub9IvxJUGscHbUbxeqLJdF6jOWNA7xA&s=10.jpg',
     favorito: false
   },
   {
@@ -193,7 +193,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Terror',
     descricao: 'A história de uma jovem oprimida pela mãe fanática religiosa e humilhada pelos colegas, que descobre possuir poderes telecinéticos, culminando em uma terrível vingança no baile de formatura.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.12 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGT5gLoMljRIzMzOsjGUQYF2_hVfKjQaHdgaPrPCVsxQ&s=10.jpg',
     favorito: false
   },
   {
@@ -202,7 +202,7 @@ export class Livros {
     autor: 'Jane Austen',
     genero: 'Romance Clássico',
     descricao: 'A clássica história de Elizabeth Bennet e do orgulhoso Sr. Darcy, explorando as complexidades do amor, classe social e mal-entendidos na Inglaterra do século XIX.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.01 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMZEn7Fcqm4wDKWoPO4YBKdfWiODjEHGVxDI3a_RE5pQ&s=10.jpg',
     favorito: false
   },
   {
@@ -211,7 +211,7 @@ export class Livros {
     autor: 'Jane Austen',
     genero: 'Romance Clássico',
     descricao: 'Anne Elliot encontra novamente o Capitão Wentworth, de quem foi persuadida a se separar anos antes, e tem uma segunda chance de viver um grande amor.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.01 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScj9zmhSZeX3VRf8bc4q2sH3h0NWgMo-g87xi7Yqzkvw&s.jpg',
     favorito: false
   },
   {
@@ -220,7 +220,7 @@ export class Livros {
     autor: 'Jane Austen',
     genero: 'Romance Clássico',
     descricao: 'Acompanha as irmãs Dashwood, Elinor e Marianne, enquanto navegam pelas convenções sociais e pelas provações do amor e da perda na sociedade inglesa.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.02.jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9k5Eq80tBVnzxK9fq1iONro0NdRkBslezepykzwluBg&s=10.jpg',
     favorito: false
   },
   {
@@ -229,7 +229,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Terror',
     descricao: 'Jack Torrance aceita um emprego como zelador no isolado Hotel Overlook. Enquanto o inverno os isola, forças malignas do hotel começam a enlouquecê-lo, ameaçando sua esposa e seu filho Danny, que possui poderes telepáticos.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.14.jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvd-LUKoxLy2mnd9e4go7cONowFHrBdRBaT2mZNHcUlA&s=10.jpg',
     favorito: false
   },
   {
@@ -238,7 +238,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Fantasia Sombria',
     descricao: 'Um jovem herda as chaves para um mundo paralelo aterrorizante e maravilhoso, onde o bem e o mal estão em guerra, e ele se vê no centro de uma batalha épica.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.12 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStdRcBvaVIdmm-ZWc3pjdgFF4UPoISqOimZ5gROCtoWA&s=10.jpg',
     favorito: false
   },
   {
@@ -247,7 +247,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Terror',
     descricao: 'Uma família se muda para uma casa próxima a um antigo cemitério de animais. Quando uma tragédia os atinge, o luto leva o pai a descobrir o poder macabro de ressurreição que o solo daquele local possui.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.13 (2).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTquFeNLa1Nr8_9eEnr1YhR7QX_NQ5EHS0IizxzK00UFA&s=10.jpg',
     favorito: false
   },
   {
@@ -256,7 +256,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Mistério/Suspense',
     descricao: 'Um universitário consegue um emprego de verão em um parque de diversões na Carolina do Norte em 1973, onde se envolve com o mistério de um assassinato não resolvido e um fantasma.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.13 (1).jpeg',
+    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAk3TOj03QFB7pVhBouVpoCNa0yW6EugyEuX4HP80MSg&s=10.jpg',
     favorito: false
   },
   {
