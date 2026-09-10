@@ -1,5 +1,5 @@
 .pagina-livros {
-  min-height: 100vh;
+  min-height: auto;
   background: #f5fbfc;
   padding: 30px 40px 50px;
   font-family: Arial, sans-serif;

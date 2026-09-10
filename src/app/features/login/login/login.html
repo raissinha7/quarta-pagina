@@ -1,34 +1,78 @@
-<div class="auth-container">
+<div class="pagina-login">
 
-  <div class="auth-card">
+  <header class="topo">
+    <button class="menu">☰</button>
+    <span class="logo">BIBLIOTECA</span>
+  </header>
 
-    <h1>Quarta Página</h1>
+  <section class="login">
 
-    <h2>Entrar</h2>
+    <h1>login</h1>
+    <p class="boas-vindas">Obrigada por Voltar!</p>
 
-    <p>Entre para acessar a biblioteca.</p>
+    <div class="campo">
+      <span class="icone">♙</span>
 
-    <input
-      type="email"
-      placeholder="E-mail"
-      [(ngModel)]="email"
+      <div>
+        <label>Seu email</label>
+
+        <input
+          type="email"
+          [(ngModel)]="email"
+          placeholder="ex: ana@gmail.com"
+        >
+      </div>
+    </div>
+
+    <div class="campo">
+      <span class="icone">✉</span>
+
+      <div>
+        <label>Senha</label>
+
+        <input
+          type="password"
+          [(ngModel)]="senha"
+          placeholder="Digite sua senha"
+        >
+      </div>
+    </div>
+
+    <button
+      class="esqueci"
+      type="button"
+      (click)="esqueciSenha()"
     >
-
-    <input
-      type="password"
-      placeholder="Senha"
-      [(ngModel)]="senha"
-    >
-
-    <button (click)="entrar()">
-      Entrar
+      Esqueceu seus dados?
     </button>
 
-    <p>
-      Ainda não possui uma conta?
-      <a routerLink="/cadastro">Cadastre-se</a>
-    </p>
+    <button
+      class="btn-entrar"
+      type="button"
+      (click)="entrar()"
+    >
+      ENTRAR
+    </button>
 
-  </div>
+    <div class="divisor">
+      <span></span>
+      <p>OU</p>
+      <span></span>
+    </div>
+
+    <div class="redes">
+      <button type="button" (click)="loginGoogle()">G</button>
+      <button type="button" (click)="loginFacebook()">f</button>
+    </div>
+
+    <div class="cadastro">
+      <span>Ainda não tem conta?</span>
+
+      <button type="button" (click)="cadastrar()">
+        CADASTRA-SE
+      </button>
+    </div>
+
+  </section>
 
 </div>
