@@ -41,31 +41,31 @@ export const routes: Routes = [
   {
     path: 'home',
     component: Home,
-    canActivate: [authGuard]
+    //canActivate: [authGuard]
   },
 
   {
     path: 'livros',
     component: LivrosComponent,
-    canActivate: [authGuard]
+    // canActivate: [authGuard]
   },
 
   {
     path: 'favoritos',
     component: FavoritosComponent,
-    canActivate: [authGuard]
+   // canActivate: [authGuard]
   },
 
   {
     path: 'adicionar',
     component: AdicionarLivros,
-    canActivate: [authGuard]
+   // canActivate: [authGuard]
   },
 
   {
     path: 'emprestimos',
     component: Emprestimos,
-    canActivate: [authGuard]
+   // canActivate: [authGuard]
   },
 
   // Se escrever uma rota que não existe
