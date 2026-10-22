@@ -3,17 +3,19 @@
   <p class="Subtitulo">Encontre seu próximo livro favorito</p>
 
   <div class="grade-livros">
-    @for (livro of livrosFiltrados; track livro.id) {
+    @for (livro of livrosFiltrados(); track livro.id) {
       <div class="card-livro">
         <img [src]="livro.capa" [alt]="livro.titulo" />
-        <h2>{{ livro.titulo }}</h2>
-        <p><strong>Autor:</strong> {{ livro.autor }}</p>
-        <span>{{ livro.categoria }}</span>
-        <p>{{ livro.descricao }}</p>
-        <button (click)="favoritar(livro.id)">
-          {{ livro.favorito ? 'Favorito' : 'Favoritar' }}
-        </button>
-        <button (click)="emprestar(livro)">Emprestimo</button>
+        <div class="info-livro">
+          <h2>{{ livro.titulo }}</h2>
+          <p><strong>Autor:</strong> {{ livro.autor }}</p>
+          <span>{{ livro.categoria }}</span>
+          <p>{{ livro.descricao }}</p>
+          <button (click)="favoritar(livro.id)">
+            {{ livro.favorito ? 'Favorito' : 'Favoritar' }}
+          </button>
+          <button (click)="emprestar(livro)">Empréstimo</button>
+        </div>
       </div>
     } @empty {
       <p>Nenhum livro encontrado.</p>

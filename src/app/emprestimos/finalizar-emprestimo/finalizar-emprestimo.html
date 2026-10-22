@@ -1,0 +1,76 @@
+
+<div class="pagina">
+
+  <h1>Finalizar empréstimo</h1>
+
+  @if (livrosEmprestados.length === 0) {
+
+    <div class="vazio">
+      <h2>Nenhum livro selecionado</h2>
+      <p>Volte à página de livros e escolha o que deseja emprestar.</p>
+
+      <a routerLink="/livros">Ver livros</a>
+    </div>
+
+  } @else {
+
+    <h2>Confira os livros selecionados</h2>
+
+    <div class="lista">
+
+      @for (livro of livrosEmprestados; track livro.id) {
+        <div class="livro">
+
+          <img
+            [src]="livro.capa"
+            [alt]="livro.titulo"
+          >
+
+          <div>
+            <h3>{{ livro.titulo }}</h3>
+            <p>{{ livro.autor }}</p>
+          </div>
+
+        </div>
+      }
+
+    </div>
+
+    <div class="dados-retirada">
+      <h2>Dados para retirada</h2>
+
+      <label for="dataRetirada">Data prevista para retirada</label>
+      <input
+        id="dataRetirada"
+        type="date"
+        [min]="dataMinima"
+        [(ngModel)]="dataRetirada"
+      >
+
+      <label for="localRetirada">Local de retirada</label>
+      <select
+        id="localRetirada"
+        [(ngModel)]="localRetirada"
+      >
+        <option value="">Selecione o local</option>
+        <option value="Biblioteca Quarta Página">
+          Biblioteca Quarta Página
+        </option>
+      </select>
+    </div>
+
+    <button
+      class="confirmar"
+      (click)="confirmarEmprestimo()"
+    >
+      Confirmar empréstimo
+    </button>
+
+  }
+
+  <button type="button" class="voltar" (click)="voltar()">
+    Voltar
+  </button>
+
+</div>
+

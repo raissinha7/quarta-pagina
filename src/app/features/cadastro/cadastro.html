@@ -25,6 +25,13 @@
       placeholder="Senha"
       [(ngModel)]="senha"
     >
+    <input
+  type="text"
+  name="endereco"
+  [(ngModel)]="endereco"
+  placeholder="Seu endereço"
+  required
+>
 
     <button (click)="cadastrar()">
       Cadastrar

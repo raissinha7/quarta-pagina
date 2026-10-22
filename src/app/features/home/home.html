@@ -1,10 +1,5 @@
-<div class="home">
 
-  <header class="topo">
-    <span class="menu">☰</span>
-    <span class="logo">BIBLIOTECA</span>
-    <span class="icone">♡</span>
-  </header>
+<div class="home">
 
   <section class="boas-vindas">
     <p>Olá!</p>
@@ -12,31 +7,31 @@
   </section>
 
   <div class="busca">
-  <span>🔍</span>
+    <span></span>
 
-  <input
-    #termoPesquisa
-    type="text"
-    placeholder="Buscar um livro..."
-    (keyup.enter)="pesquisar(termoPesquisa.value)"
-  >
+    <input
+      #termoPesquisa
+      type="text"
+      placeholder="Buscar um livro..."
+      (keyup.enter)="pesquisar(termoPesquisa.value)"
+    >
 
-  <button
-    type="button"
-    (click)="pesquisar(termoPesquisa.value)">
-    Pesquisar
-  </button>
-</div>
+    <button
+      type="button"
+      (click)="pesquisar(termoPesquisa.value)">
+      Pesquisar
+    </button>
+  </div>
 
   <h3>Categorias</h3>
 
   <div class="categorias">
-  <button (click)="irParaLivros()">Romance</button>
-  <button (click)="irParaLivros()">Ficção</button>
-  <button (click)="irParaLivros()">Suspense</button>
-  <button (click)="irParaLivros()">Fantasia</button>
-  <button (click)="irParaLivros()">Educação</button>
-</div>
+    <button (click)="irParaLivros('Romance')">Romance</button>
+    <button (click)="irParaLivros('Ficção')">Ficção</button>
+    <button (click)="irParaLivros('Suspense')">Suspense</button>
+    <button (click)="irParaLivros('Fantasia')">Fantasia</button>
+    <button (click)="irParaLivros('Educação')">Educação</button>
+  </div>
 
   <div class="banner">
     <h2>Encontre sua próxima leitura</h2>
@@ -51,17 +46,26 @@
   <div class="livros-destaque">
 
     <div class="livro" (click)="irParaLivros()">
-      <img src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg">
+      <img
+        src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg"
+        alt="Capa do livro O Pequeno Príncipe"
+      >
       <p>O Pequeno Príncipe</p>
     </div>
 
     <div class="livro" (click)="irParaLivros()">
-      <img src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg">
+      <img
+        src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg"
+        alt="Capa do livro Harry Potter"
+      >
       <p>Harry Potter</p>
     </div>
 
     <div class="livro" (click)="irParaLivros()">
-      <img src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg">
+      <img
+        src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg"
+        alt="Capa do livro Dom Casmurro"
+      >
       <p>Dom Casmurro</p>
     </div>
 

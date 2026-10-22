@@ -1,57 +1,72 @@
+
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Component, inject } from '@angular/core';
-import { Livros } from '.././services/livros';
 import { Livro } from '../core/models/livro.model';
+import { Auth } from '../services/auth';
+import { Livros } from '../services/livros';
 
 @Component({
   selector: 'app-livros',
-  imports: [],
   templateUrl: './livros.html',
-  styleUrl: './livros.css'
+  styleUrl: './livros.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LivrosComponent {
+  private readonly livrosService = inject(Livros);
+  private readonly auth = inject(Auth);
+  private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
 
-  private livrosService = inject(Livros);
-  private router = inject(Router);
-  private route = inject(ActivatedRoute);
+  private readonly queryParamMap = toSignal(
+    this.route.queryParamMap,
+    {
+      initialValue: this.route.snapshot.queryParamMap
+    }
+  );
 
-  livros = this.livrosService.livros;
+  readonly livrosFiltrados = computed(() => {
+    const params = this.queryParamMap();
+    const busca =
+      params.get('busca')?.trim().toLocaleLowerCase() ?? '';
+    const genero =
+      params.get('genero')?.trim().toLocaleLowerCase() ?? '';
 
-  livrosFiltrados: Livro[] = [];
+    return this.livrosService.livros().filter(livro => {
+      const correspondeBusca =
+        busca === '' ||
+        [livro.titulo, livro.autor, livro.categoria]
+          .some(valor =>
+            valor.toLocaleLowerCase().includes(busca)
+          );
 
-  constructor() {
+      const correspondeGenero =
+        genero === '' ||
+        livro.categoria.toLocaleLowerCase() === genero;
 
-    this.route.queryParamMap.subscribe(params => {
-
-      const busca = (params.get('busca') || '')
-        .toLowerCase()
-        .trim();
-
-      const lista = this.livros();
-
-      if (busca === '') {
-
-        this.livrosFiltrados = lista;
-
-      } else {
-
-        this.livrosFiltrados = lista.filter((livro: Livro) =>
-          livro.titulo.toLowerCase().includes(busca)
-        );
-
-      }
-
+      return correspondeBusca && correspondeGenero;
     });
+  });
 
-  }
-
-  favoritar(id: number) {
+  favoritar(id: number): void {
     this.livrosService.alternaFavorito(id);
   }
 
-  emprestar(livro: Livro) {
-    this.livrosService.adicionarEmprestimo(livro);
-    this.router.navigate(['/emprestimo']);
-  }
+  emprestar(livro: Livro): void {
+    if (!this.auth.estaLogado()) {
+      localStorage.setItem(
+        'livroPendenteEmprestimo',
+        JSON.stringify(livro)
+      );
 
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    this.livrosService.adicionarEmprestimo(livro);
+    this.router.navigate(['/emprestimos']);
+  }
 }
+
+export { LivrosComponent as Livros };
+

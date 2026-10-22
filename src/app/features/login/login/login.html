@@ -1,78 +1,120 @@
-<div class="pagina-login">
 
-  <header class="topo">
-    <button class="menu">☰</button>
-    <span class="logo">BIBLIOTECA</span>
-  </header>
+<div class="login-page auth-container">
+  <div class="login">
 
-  <section class="login">
-
-    <h1>login</h1>
-    <p class="boas-vindas">Obrigada por Voltar!</p>
-
-    <div class="campo">
-      <span class="icone">♙</span>
-
-      <div>
-        <label>Seu email</label>
-
-        <input
-          type="email"
-          [(ngModel)]="email"
-          placeholder="ex: ana@gmail.com"
-        >
-      </div>
-    </div>
-
-    <div class="campo">
-      <span class="icone">✉</span>
-
-      <div>
-        <label>Senha</label>
-
-        <input
-          type="password"
-          [(ngModel)]="senha"
-          placeholder="Digite sua senha"
-        >
-      </div>
-    </div>
-
-    <button
-      class="esqueci"
-      type="button"
-      (click)="esqueciSenha()"
+    <img
+      src="/icone-logo-quarta-pagina.png"
+      alt="Logo da Biblioteca"
+      class="logo-login"
     >
-      Esqueceu seus dados?
-    </button>
 
-    <button
-      class="btn-entrar"
-      type="button"
-      (click)="entrar()"
+    <h1>Bem-vindo de volta!</h1>
+
+    <p class="subtitulo">
+      Por favor, insira seus dados para continuar.
+    </p>
+
+    <form
+      (ngSubmit)="entrar()"
+      autocomplete="off"
     >
-      ENTRAR
-    </button>
 
-    <div class="divisor">
-      <span></span>
-      <p>OU</p>
-      <span></span>
+      <label for="email">E-mail</label>
+
+      <div class="campo">
+        <span><i class="fas fa-envelope"></i></span>
+      
+ <input
+  type="email"
+  id="email"
+  name="email"
+  placeholder="Digite seu e-mail"
+  [(ngModel)]="email"
+  autocomplete="off"
+  autocapitalize="none"
+  spellcheck="false"
+  required
+>
+      </div>
+
+      <label for="senha">Senha</label>
+
+      <div class="campo">
+        <span><i class="fas fa-lock"></i></span>
+
+    <input
+  type="password"
+  id="senha"
+  name="senha"
+  placeholder="Digite sua senha"
+  [(ngModel)]="senha"
+  autocomplete="new-password"
+  required
+>
+      </div>
+
+      <button
+        type="button"
+        class="esqueceu"
+        (click)="esqueciSenha()"
+      >
+        Esqueci minha senha
+      </button>
+
+      <button
+        type="submit"
+        class="btn-entrar"
+      >
+        ENTRAR
+      </button>
+
+    </form>
+
+    <div class="ou">
+      <span>OU</span>
     </div>
 
-    <div class="redes">
-      <button type="button" (click)="loginGoogle()">G</button>
-      <button type="button" (click)="loginFacebook()">f</button>
-    </div>
+    <div class="sociais">
+      <button
+        type="button"
+        title="Entrar com Google"
+        (click)="loginGoogle()"
+      >
+        <i class="fab fa-google"></i>
+      </button>
 
-    <div class="cadastro">
-      <span>Ainda não tem conta?</span>
-
-      <button type="button" (click)="cadastrar()">
-        CADASTRA-SE
+      <button
+        type="button"
+        title="Entrar com Facebook"
+        (click)="loginFacebook()"
+      >
+        <i class="fab fa-facebook-f"></i>
       </button>
     </div>
 
-  </section>
+    <div class="cadastro">
+      Não tem uma conta?
 
+      <button
+        type="button"
+        (click)="cadastrar()"
+      >
+        Cadastre-se
+      </button>
+    </div>
+
+    <div class="acesso-admin">
+      <span>É administrador?</span>
+
+      <button
+        type="button"
+        (click)="acessarAdmin()"
+      >
+        <i class="fas fa-user-shield"></i>
+        Acesso do administrador
+      </button>
+    </div>
+
+  </div>
 </div>
+

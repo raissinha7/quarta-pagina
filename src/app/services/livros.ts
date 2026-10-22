@@ -1,10 +1,21 @@
-import { Injectable, signal, computed } from '@angular/core';
-import {Livro} from '../core/models/livro.model';
+
+import { Injectable, signal, computed, inject } from '@angular/core';
+import { Livro } from '../core/models/livro.model';
+import { Auth } from './auth';
+
+export interface RegistroEmprestimo {
+  livros: Livro[];
+  data: string;
+  dataRetirada: string;
+  localRetirada: string;
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class Livros {
+  private readonly auth = inject(Auth);
+
   livros = signal<Livro[]>([
     {
       id: 1,
@@ -16,7 +27,7 @@ export class Livros {
       favorito: false
     },
     {
-       id: 2,
+      id: 2,
       titulo: 'Dom Casmurro',
       autor: 'Machado de Assis',
       categoria: 'Romance',
@@ -25,7 +36,7 @@ export class Livros {
       favorito: false
     },
     {
-       id: 3,
+      id: 3,
       titulo: 'Harry Potter e a Pedra Filosofal',
       autor: 'J. K. Rowling',
       categoria: 'Fantasia',
@@ -34,7 +45,7 @@ export class Livros {
       favorito: false
     },
     {
-     id: 4,
+      id: 4,
       titulo: 'O Hobbit',
       autor: 'J. R. R. Tolkien',
       categoria: 'Aventura',
@@ -43,7 +54,7 @@ export class Livros {
       favorito: false
     },
     {
-     id: 5,
+      id: 5,
       titulo: 'JavaScript: O Guia Definitivo',
       autor: 'David Flanagan',
       categoria: 'Programação',
@@ -52,7 +63,7 @@ export class Livros {
       favorito: false
     },
     {
-     id: 6,
+      id: 6,
       titulo: 'Clean Code',
       autor: 'Robert C. Martin',
       categoria: 'Programação',
@@ -61,7 +72,7 @@ export class Livros {
       favorito: false
     },
     {
-     id: 7,
+      id: 7,
       titulo: 'Introdução á Algoritmos',
       autor: 'Thomas H. Cormen',
       categoria: 'Programação',
@@ -70,73 +81,133 @@ export class Livros {
       favorito: false
     },
     {
-     id: 8,
+      id: 8,
       titulo: 'Sapiens',
       autor: 'Yuval Noah Harari',
       categoria: 'História',
-      descricao: 'Uma visão da história da humanidade desde os primeiros seres humanos até os tempos modernos .',
+      descricao: 'Uma visão da história da humanidade desde os primeiros seres humanos até os tempos modernos.',
       capa: 'https://covers.openlibrary.org/b/title/Sapiens-L.jpg',
       favorito: false
     },
     {
-     id: 9,
+      id: 9,
       titulo: 'Uma Breve História do Tempo',
       autor: 'Stephen Hawking',
       categoria: 'História',
-      descricao: 'Uma introdução e grandes questões sobre o universo, o tempo e a origem do cosmos.',
+      descricao: 'Uma introdução às grandes questões sobre o universo, o tempo e a origem do cosmos.',
       capa: 'https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg',
       favorito: false
     },
-     {
-     id: 10,
+    {
+      id: 10,
       titulo: 'História do Brasil',
-      autor: 'Boris  Fausto',
+      autor: 'Boris Fausto',
       categoria: 'História',
       descricao: 'Uma visão geral dos principais acontecimentos da história brasileira.',
       capa: 'https://covers.openlibrary.org/b/title/Historia%20do%20Brasil-L.jpg',
       favorito: false
     },
   ]);
+
   emprestimos = signal<Livro[]>([]);
+
+  historicoEmprestimos = signal<RegistroEmprestimo[]>(
+    JSON.parse(
+      localStorage.getItem('historicoEmprestimos') || '[]'
+    )
+  );
+
   favoritos = computed(() =>
-  this.livros().filter(livro => livro.favorito)
-);
-adicionarLivro(livro: Livro) {
-  this.livros.update(lista => [
-    ...lista,
-    {
-      ...livro,
-      id: Date.now()
-    }
-  ]);
+    this.livros().filter(livro => livro.favorito)
+  );
+
+  adicionarLivro(livro: Livro): void {
+    this.livros.update(lista => [
+      ...lista,
+      {
+        ...livro,
+        id: Date.now()
+      }
+    ]);
   }
-  removerLivro(id: number) {
+
+  removerLivro(id: number): void {
     this.livros.update(lista =>
       lista.filter(livro => livro.id !== id)
     );
   }
-  alternaFavorito(id: number) {
+
+  alternaFavorito(id: number): void {
     this.livros.update(lista =>
       lista.map(livro =>
         livro.id === id
-        ? { ...livro, favorito: !livro.favorito}
-        : livro
+          ? { ...livro, favorito: !livro.favorito }
+          : livro
       )
     );
   }
-  adicionarEmprestimo(livro: Livro) {
+
+  adicionarEmprestimo(livro: Livro): boolean {
+    if (!this.auth.estaLogado()) {
+      return false;
+    }
+
     this.emprestimos.update(lista => {
-      const jaExiste = lista.some(item => item.id === livro.id);
-      if (jaExiste) {
+      if (lista.some(item => item.id === livro.id)) {
         return lista;
       }
+
       return [...lista, livro];
     });
+
+    return true;
   }
-  removerEmprestimo(id: number) {
+
+  removerEmprestimo(id: number): void {
     this.emprestimos.update(lista =>
       lista.filter(livro => livro.id !== id)
     );
   }
-}
 
+  confirmarEmprestimo(
+    dataRetirada: string,
+    localRetirada: string
+  ): boolean {
+    if (!this.auth.estaLogado()) {
+      return false;
+    }
+
+    const livrosSelecionados = this.emprestimos();
+
+    if (
+      livrosSelecionados.length === 0 ||
+      !dataRetirada ||
+      !localRetirada
+    ) {
+      return false;
+    }
+
+    const novoEmprestimo: RegistroEmprestimo = {
+      livros: [...livrosSelecionados],
+      data: new Date().toLocaleString('pt-BR'),
+      dataRetirada,
+      localRetirada
+    };
+
+    const historicoAtualizado = [
+      ...this.historicoEmprestimos(),
+      novoEmprestimo
+    ];
+
+    this.historicoEmprestimos.set(historicoAtualizado);
+
+    localStorage.setItem(
+      'historicoEmprestimos',
+      JSON.stringify(historicoAtualizado)
+    );
+
+    this.emprestimos.set([]);
+
+    return true;
+  }
+}

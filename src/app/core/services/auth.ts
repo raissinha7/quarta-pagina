@@ -1,55 +1,81 @@
+
 import { Injectable, signal } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthService {
+interface Usuario {
+  nome: string;
+  email: string;
+  senha: string;
+  endereco: string;
+}
 
-  private loggedIn = signal<boolean>(
-    localStorage.getItem('usuarioLogado') === 'true'
+@Injectable({
+  providedIn: 'root',
+})
+export class Auth {
+  logado = signal<boolean>(
+    localStorage.getItem('quartapaginaLogado') === 'true'
   );
 
-  isLoggedIn() {
-    return this.loggedIn();
+  estaLogado(): boolean {
+    return this.logado();
   }
 
   login(email: string, senha: string): boolean {
-
-    const usuarioSalvo = localStorage.getItem('usuario');
+    const usuarioSalvo = localStorage.getItem('usuarioCadastro');
 
     if (!usuarioSalvo) {
       return false;
     }
 
-    const usuario = JSON.parse(usuarioSalvo);
+    try {
+      const usuario: Usuario = JSON.parse(usuarioSalvo);
 
-    if (usuario.email === email && usuario.senha === senha) {
-      this.loggedIn.set(true);
-      localStorage.setItem('usuarioLogado', 'true');
-      return true;
+      const emailCorreto =
+        usuario.email.trim().toLowerCase() ===
+        email.trim().toLowerCase();
+
+      const senhaCorreta =
+        String(usuario.senha) === String(senha);
+
+      if (emailCorreto && senhaCorreta) {
+        localStorage.setItem('quartapaginaLogado', 'true');
+        this.logado.set(true);
+        return true;
+      }
+
+      return false;
+    } catch (erro) {
+      console.error('Erro ao validar o usuário:', erro);
+      return false;
     }
-
-    return false;
   }
 
-  cadastrar(nome: string, email: string, senha: string): boolean {
-
-    const usuario = {
-      nome,
-      email,
-      senha
+  cadastrar(
+    nome: string,
+    email: string,
+    senha: string,
+    endereco: string
+  ): boolean {
+    const usuario: Usuario = {
+      nome: nome.trim(),
+      email: email.trim().toLowerCase(),
+      senha: senha.trim(),
+      endereco: endereco.trim(),
     };
 
-    localStorage.setItem('usuario', JSON.stringify(usuario));
+    localStorage.setItem(
+      'usuarioCadastro',
+      JSON.stringify(usuario)
+    );
 
-    this.loggedIn.set(true);
-    localStorage.setItem('usuarioLogado', 'true');
+    localStorage.setItem('quartapaginaLogado', 'true');
+    this.logado.set(true);
 
     return true;
   }
 
-  logout() {
-    this.loggedIn.set(false);
-    localStorage.removeItem('usuarioLogado');
+  logout(): void {
+    localStorage.removeItem('quartapaginaLogado');
+    this.logado.set(false);
   }
 }
