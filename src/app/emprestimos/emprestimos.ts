@@ -1,7 +1,8 @@
+
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { Livro } from '../core/models/livro.model';
 import { Livros } from '../services/livros';
+import { Auth } from '../services/auth';
 
 @Component({
   selector: 'app-emprestimos',
@@ -11,14 +12,33 @@ import { Livros } from '../services/livros';
   styleUrl: './emprestimos.css'
 })
 export class Emprestimos {
-
   private livrosService = inject(Livros);
+  private router = inject(Router);
+  private auth = inject(Auth);
 
-  get livrosEmprestados(): Livro[] {
+  get livrosEmprestados() {
     return this.livrosService.emprestimos();
   }
 
-  removerLivro(id: number) {
-    this.livrosService.removerEmprestimo(id);
+  confirmarEmprestimo(): void {
+    // Verifica se o usuário está logado
+    if (!this.auth.estaLogado()) {
+      alert('Você precisa fazer login para alugar um livro.');
+
+      // Guarda a intenção de voltar aos empréstimos após o login
+      localStorage.setItem('retornarAoEmprestimo', 'true');
+
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    // Verifica se existe algum livro selecionado
+    if (this.livrosEmprestados.length === 0) {
+      alert('Nenhum livro selecionado para empréstimo.');
+      this.router.navigate(['/livros']);
+      return;
+    }
+
+    this.router.navigate(['/finalizar-emprestimo']);
   }
 }

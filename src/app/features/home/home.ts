@@ -1,3 +1,4 @@
+
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
@@ -9,16 +10,19 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class Home {
   private router = inject(Router);
-  irParaLivros() {
-    this.router.navigate(['/livros']);
+
+  irParaLivros(genero?: string) {
+    this.router.navigate(['/livros'], {
+      queryParams: genero ? { genero } : {}
+    });
   }
 
-    pesquisar(termo: string) {
+  pesquisar(termo: string) {
     const busca = termo.trim();
 
     if (busca !== '') {
       this.router.navigate(['/livros'], {
-        queryParams: { busca: busca }
+        queryParams: { busca }
       });
     }
   }

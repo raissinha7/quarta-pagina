@@ -1,29 +1,33 @@
 .topo {
-  height: 65px;
-  background: #b2e0ff;
-
+  min-height: 65px;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 35px;
-
   border-bottom: 1px solid #e5eeee;
-
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-.menu {
-  font-size: 22px;
-  color: #183b47;
-  cursor: pointer;
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.logo {
+.logo-pequena {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.frase-header {
   color: #183b47;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
+  margin: 0;
 }
 /* Estilo geral do header (fundo, espaçamento) */
 .meu-header {
@@ -71,18 +75,21 @@ nav a:hover {
 }
 
 /* CELULAR */
-
 @media (max-width: 700px) {
-
   .topo {
-    padding: 0 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 18px;
   }
 
-  .logo {
+  .frase-header {
     font-size: 12px;
   }
 
   nav {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
   }
 

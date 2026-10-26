@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Menu } from '../../../features/menu/menu';
@@ -9,5 +10,5 @@ import { Menu } from '../../../features/menu/menu';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {
-}
+export class Header {}
+

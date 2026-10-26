@@ -1,24 +1,20 @@
+
 <div class="pagina">
 
-  <h1>Meus Empréstimos</h1>
+  <h1>Finalizar empréstimo</h1>
 
   @if (livrosEmprestados.length === 0) {
 
     <div class="vazio">
-
       <h2>Nenhum livro selecionado</h2>
+      <p>Volte à página de livros e escolha o que deseja emprestar.</p>
 
-      <p>
-        Escolha um livro para realizar um empréstimo.
-      </p>
-
-      <a routerLink="/livros">
-        Ver livros
-      </a>
-
+      <a routerLink="/livros">Ver livros</a>
     </div>
 
   } @else {
+
+    <h2>Confira os livros selecionados</h2>
 
     <div class="lista">
 
@@ -32,21 +28,8 @@
           >
 
           <div>
-
-            <h2>
-              {{ livro.titulo }}
-            </h2>
-
-            <p>
-              {{ livro.autor }}
-            </p>
-
-            <button
-              (click)="removerLivro(livro.id)"
-            >
-              Remover
-            </button>
-
+            <h3>{{ livro.titulo }}</h3>
+            <p>{{ livro.autor }}</p>
           </div>
 
         </div>
@@ -56,12 +39,14 @@
     </div>
 
     <button
-      class="continuar"
-      routerLink="/livros"
+      class="confirmar"
+      (click)="confirmarEmprestimo()"
     >
-      Continuar emprestimos
+      Confirmar empréstimo
     </button>
 
   }
+
+  <a routerLink="/emprestimos">Voltar</a>
 
 </div>

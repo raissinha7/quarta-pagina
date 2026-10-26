@@ -1,0 +1,32 @@
+<div class="pagina-conta">
+  <div class="cartao-conta">
+    <div class="avatar">👤</div>
+
+    <h1>Minha conta</h1>
+    <p class="subtitulo">Seus dados pessoais</p>
+
+    @if (usuario) {
+      <div class="campo">
+        <label>Nome completo</label>
+        <p>{{ usuario.nome }}</p>
+      </div>
+
+      <div class="campo">
+        <label>E-mail</label>
+        <p>{{ usuario.email }}</p>
+      </div>
+
+      <div class="campo">
+        <label>Endereço</label>
+        <p>{{ usuario.endereco || 'Endereço não informado' }}</p>
+      </div>
+    } @else {
+      <p>Não encontramos os dados do cadastro.</p>
+    }
+
+    <a routerLink="/home" class="botao-voltar">Voltar ao início</a>
+    <button type="button" class="botao-sair" (click)="sair()">
+      Sair da conta
+    </button>
+  </div>
+</div>
