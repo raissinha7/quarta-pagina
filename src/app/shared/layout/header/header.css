@@ -17,9 +17,11 @@
 }
 
 .logo-pequena {
-  width: 35px;
-  height: 35px;
+  display: block;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .frase-header {
@@ -41,13 +43,6 @@
   display: flex;
   align-items: center; /* Centraliza a logo e o texto na vertical */
   gap: 15px; /* Espaço entre a logo e o texto */
-}
-
-/* Controle do tamanho da logo */
-.logo-pequena {
-  width: 40px; /* Ajuste esse valor para deixar a logo maior ou menor */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 5px; /* Opcional: arredonda as pontas da imagem */
 }
 
 /* Estilo da frase */

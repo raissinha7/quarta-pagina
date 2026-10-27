@@ -1,6 +1,13 @@
 <!-- Botão que fica fixo na tela para abrir o menu -->
-<button class="btn-abrir" (click)="toggleMenu()">
-  <i class="fas fa-bars"></i>
+<button
+  class="btn-abrir"
+  type="button"
+  aria-label="Abrir menu"
+  [attr.aria-expanded]="menuAberto"
+  aria-controls="menu-lateral"
+  (click)="toggleMenu()"
+>
+  <span aria-hidden="true">☰</span>
 </button>
 
 <!-- Fundo escuro que aparece quando o menu abre -->
@@ -11,11 +18,16 @@
 
 <!-- O Menu Lateral em si -->
 <!-- A classe 'aberto' só é adicionada se a variável menuAberto for true -->
-<nav class="menu-lateral" [class.aberto]="menuAberto">
+<nav id="menu-lateral" class="menu-lateral" [class.aberto]="menuAberto">
   
   <!-- Botão para fechar (X) dentro do menu -->
-  <button class="btn-fechar" (click)="toggleMenu()">
-    <i class="fas fa-times"></i>
+  <button
+    class="btn-fechar"
+    type="button"
+    aria-label="Fechar menu"
+    (click)="toggleMenu()"
+  >
+    <span aria-hidden="true">×</span>
   </button>
 
   <ul>
