@@ -1,24 +1,72 @@
-<div class="pagina-livros">
-  <h1>Quarta Pagina</h1>
-  <p class="Subtitulo">Encontre seu próximo livro favorito</p>
 
-  <div class="grade-livros">
-    @for (livro of livrosFiltrados(); track livro.id) {
-      <div class="card-livro">
-        <img [src]="livro.capa" [alt]="livro.titulo" />
-        <div class="info-livro">
-          <h2>{{ livro.titulo }}</h2>
-          <p><strong>Autor:</strong> {{ livro.autor }}</p>
-          <span>{{ livro.genero }}</span>
-          <p>{{ livro.descricao }}</p>
-          <button (click)="favoritar(livro.id)">
-            {{ livro.favorito ? 'Favorito' : 'Favoritar' }}
-          </button>
-          <button (click)="emprestar(livro)">Empréstimo</button>
-        </div>
+@if (livroSelecionado(); as livro) {
+  <div class="pagina-detalhes">
+
+    <button class="voltar-livros" (click)="fecharDetalhes()">
+      ← Voltar para os livros
+    </button>
+
+    <div class="detalhes-livro">
+      <img [src]="livro.capa" [alt]="livro.titulo">
+
+      <div class="texto-detalhes">
+        <h1>{{ livro.titulo }}</h1>
+
+        <p><strong>Autor:</strong> {{ livro.autor }}</p>
+
+        <p><strong>Gênero:</strong> {{ livro.genero }}</p>
+
+        <h3>Sobre o livro</h3>
+
+        <p class="descricao-detalhes">
+          {{ livro.descricao }}
+        </p>
+
+        <button (click)="favoritar(livro.id)">
+          {{ livro.favorito ? 'Favorito' : 'Favoritar' }}
+        </button>
+
+        <button (click)="emprestar(livro)">
+          Empréstimo
+        </button>
       </div>
-    } @empty {
-      <p>Nenhum livro encontrado.</p>
-    }
+    </div>
   </div>
-</div>
+} @else {
+  <div class="pagina-livros">
+    <h1>Catálogo</h1>
+    <p class="Subtitulo">Encontre seu próximo livro favorito</p>
+
+    <div class="grade-livros">
+      @for (livro of livrosFiltrados(); track livro.id) {
+        <div class="card-livro">
+
+          <img
+            [src]="livro.capa"
+            [alt]="livro.titulo"
+            class="capa-clicavel"
+            (click)="abrirDetalhes(livro)"
+          />
+
+          <div class="info-livro">
+            <h2>{{ livro.titulo }}</h2>
+
+            <p><strong>Autor:</strong> {{ livro.autor }}</p>
+
+            <span>{{ livro.genero }}</span>
+
+            <button (click)="favoritar(livro.id)">
+              {{ livro.favorito ? 'Favorito' : 'Favoritar' }}
+            </button>
+
+            <button (click)="emprestar(livro)">
+              Empréstimo
+            </button>
+          </div>
+        </div>
+      } @empty {
+        <p>Nenhum livro encontrado.</p>
+      }
+    </div>
+  </div>
+}

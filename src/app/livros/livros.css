@@ -1,191 +1,300 @@
-.pagina-livros {
-  min-height: auto;
-  background: #f5fbfc;
-  padding: 30px 40px 50px;
-  font-family: Arial, sans-serif;
-}
 
-/* TÍTULO */
+/* =========================
+   PÁGINA DE LIVROS
+========================= */
+
+.pagina-livros {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 25px 35px;
+  background: #f4fafb;
+}
 
 .pagina-livros h1 {
-  color: #183b47;
+  color: #164f5c;
   font-size: 30px;
-  margin: 0 0 6px;
+  margin-bottom: 12px;
 }
 
-.subtitulo {
-  color: #7b8589;
-  font-size: 14px;
-  margin: 0 0 30px;
+.Subtitulo {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 
-/* GRID DOS LIVROS */
+/* =========================
+   GRADE DE LIVROS
+========================= */
 
 .grade-livros {
   display: grid;
-  grid-template-columns: repeat(4, minmax(180px, 1fr));
-  gap: 24px;
-
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1310px;
+  margin: 30px auto;
+  align-items: stretch;
 }
 
-/* CARD */
+/* =========================
+   CARDS
+========================= */
 
 .card-livro {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
-  border-radius: 18px;
-  padding: 14px;
-
+  padding: 16px;
+  border-radius: 22px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-
-  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 0;
+  transition: transform 0.2s;
 }
 
 .card-livro:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
-/* CAPA */
+/* =========================
+   CAPAS
+========================= */
 
-.card-livro img {
-  display: block;
-
+.capa-clicavel {
   width: 100%;
-  height: 230px;
-
+  height: 250px;
   object-fit: contain;
-
-  background: #eef7f8;
-
-  border-radius: 12px;
+  background: #edf6f7;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* INFORMAÇÕES */
+.capa-clicavel:hover {
+  transform: scale(1.02);
+}
+
+/* =========================
+   INFORMAÇÕES DOS LIVROS
+========================= */
 
 .info-livro {
-  padding: 4px 2px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  flex: 1;
 }
 
 .info-livro h2 {
-  color: #183b47;
-  font-size: 17px;
-  line-height: 1.3;
-
-  margin: 12px 0 6px;
-
-  min-height: 44px;
+  align-self: flex-start;
+  font-size: 18px;
+  color: #164f5c;
+  margin: 8px 0 12px;
 }
 
 .info-livro p {
-  color: #68777d;
-  font-size: 13px;
-  line-height: 1.4;
-
-  margin: 6px 0;
+  align-self: flex-start;
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
 }
-
-/* GÊNERO */
 
 .info-livro span {
-  display: inline-block;
-
-  background: #d9eef2;
-  color: #155564;
-
-  padding: 5px 10px;
-
+  align-self: flex-start;
+  font-size: 13px;
+  color: #164f5c;
+  background: #d9eff3;
+  padding: 5px 12px;
   border-radius: 20px;
-
-  font-size: 11px;
-  font-weight: bold;
-
-  margin: 5px 0;
 }
 
-/* BOTÃO */
+/* =========================
+   BOTÕES
+========================= */
 
 .info-livro button {
   width: 100%;
-  height: 40px;
-
-  margin-top: 10px;
-
+  padding: 13px;
   border: none;
-  border-radius: 9px;
-
-  background: #155564;
+  border-radius: 10px;
+  background: #164f5c;
   color: white;
-
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .info-livro button:hover {
-  background: #104653;
+  background: #287889;
 }
 
-/* TABLET */
+/* =========================
+   PÁGINA INDIVIDUAL DO LIVRO
+========================= */
+
+.pagina-detalhes {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f4fafb;
+  padding: 25px 35px;
+}
+
+/* BOTÃO VOLTAR */
+
+.voltar-livros {
+  background: #164f5c;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.voltar-livros:hover {
+  background: #287889;
+}
+
+/* CONTEÚDO DOS DETALHES */
+
+.detalhes-livro {
+  max-width: 850px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 45px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+/* CAPA NA PÁGINA INDIVIDUAL */
+
+.detalhes-livro img {
+  width: 200px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* TEXTOS DOS DETALHES */
+
+.texto-detalhes {
+  flex: 1;
+  min-width: 0;
+}
+
+.texto-detalhes h1 {
+  color: #164f5c;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.texto-detalhes h3 {
+  color: #164f5c;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.texto-detalhes p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.descricao-detalhes {
+  text-align: justify;
+}
+
+/* BOTÕES DOS DETALHES */
+
+.texto-detalhes button {
+  background: #164f5c;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 12px 8px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.texto-detalhes button:hover {
+  background: #287889;
+}
+
+/* =========================
+   TABLETS
+========================= */
 
 @media (max-width: 1000px) {
-
   .grade-livros {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 }
 
-/* CELULAR */
+/* =========================
+   CELULARES
+========================= */
 
-@media (max-width: 700px) {
-
+@media (max-width: 500px) {
   .pagina-livros {
-    padding: 22px 16px 40px;
+    padding: 20px 12px;
   }
 
   .grade-livros {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
   .card-livro {
     padding: 10px;
   }
 
-  .card-livro img {
-    height: 190px;
+  .capa-clicavel {
+    height: 180px;
   }
 
   .info-livro h2 {
-    font-size: 14px;
-    min-height: 36px;
-  }
-
-  .info-livro p {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .info-livro button {
-    height: 38px;
-    font-size: 11px;
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  .pagina-detalhes {
+    padding: 20px 12px;
+  }
+
+  .detalhes-livro {
+    flex-direction: column;
+    align-items: center;
+    padding: 22px;
+    gap: 20px;
+    margin: 25px auto;
+  }
+
+  .detalhes-livro img {
+    width: 160px;
+    height: 220px;
+  }
+
+  .texto-detalhes {
+    width: 100%;
+  }
+
+  .texto-detalhes h1 {
+    font-size: 21px;
   }
 }
-
-/* CELULAR PEQUENO */
-
-@media (max-width: 400px) {
-
-  .grade-livros {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .card-livro img {
-    height: 170px;
-  }
-}
-
-  

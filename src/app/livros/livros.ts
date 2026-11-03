@@ -1,5 +1,5 @@
 
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Livro } from '../core/models/livro.model';
@@ -25,10 +25,22 @@ export class LivrosComponent {
     }
   );
 
+  readonly livroSelecionado = signal<Livro | null>(null);
+
+  abrirDetalhes(livro: Livro): void {
+    this.livroSelecionado.set(livro);
+  }
+
+  fecharDetalhes(): void {
+    this.livroSelecionado.set(null);
+  }
+
   readonly livrosFiltrados = computed(() => {
     const params = this.queryParamMap();
+
     const busca =
       params.get('busca')?.trim().toLocaleLowerCase() ?? '';
+
     const genero =
       params.get('genero')?.trim().toLocaleLowerCase() ?? '';
 
