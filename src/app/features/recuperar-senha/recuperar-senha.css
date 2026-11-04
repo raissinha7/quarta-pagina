@@ -1,0 +1,89 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.recuperar-page {
+  background: #ffffff !important;
+  min-height: 100vh;
+}
+
+.recuperar-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+  text-align: center;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.recuperar-card h1 {
+  color: #083B49;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: #687780;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.recuperar-card form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.recuperar-card label {
+  color: #083B49;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.recuperar-card input {
+  padding: 13px;
+  border: 1px solid #cbd5d9;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  outline: none;
+  font-size: 14px;
+}
+
+.recuperar-card input:focus {
+  border-color: #0b5263;
+}
+
+.recuperar-card form button {
+  padding: 14px;
+  background: #083B49;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.recuperar-card form button:hover {
+  background: #0b5263;
+}
+
+.recuperar-card a {
+  display: inline-block;
+  margin-top: 22px;
+  color: #0b5263;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}

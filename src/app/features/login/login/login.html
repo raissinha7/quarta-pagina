@@ -55,7 +55,7 @@
       <button
         type="button"
         class="esqueceu"
-        (click)="esqueciSenha()"
+        routerLink="/recuperar-senha"
       >
         Esqueci minha senha
       </button>
@@ -103,16 +103,15 @@
     </div>
 
     <div class="acesso-admin">
-      <span>É administrador?</span>
+  <span>É administrador?</span>
 
-      <button
-        type="button"
-        (click)="acessarAdmin()"
-      >
-        <i class="fas fa-user-shield"></i>
-        Acesso do administrador
-      </button>
-    </div>
+  <button
+    type="button"
+    (click)="acessarAdmin()"
+  >
+    Acesso do administrador
+  </button>
+</div>
 
   </div>
 </div>

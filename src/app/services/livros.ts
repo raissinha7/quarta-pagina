@@ -276,7 +276,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Ficção Científica/Terror',
     descricao: 'Uma menina com a capacidade de criar fogo com a mente é perseguida incansavelmente por uma agência governamental sombria que deseja usá-la como arma.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.12.jpeg',
+    capa: 'https://cdl-static.s3-sa-east-1.amazonaws.com/imagens_extra/vista_interna/gg/9788556510617/a-incendiaria_4.jpg',
     favorito: false
   },
   {
@@ -285,7 +285,7 @@ export class Livros {
     autor: 'Stephen King',
     genero: 'Terror',
     descricao: 'A continuação de O Iluminado, acompanhando um adulto Danny Torrance, que luta contra seus próprios demônios enquanto tenta proteger uma jovem com um dom semelhante de um grupo que se alimenta dessa energia.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.13.jpeg',
+    capa: 'https://covers.openlibrary.org/b/isbn/9788581050485-L.jpg',
     favorito: false
   },
   {
@@ -294,7 +294,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'Hercule Poirot é convidado para um almoço na Mansão Hollow e se depara com uma cena de assassinato à beira da piscina que parecia encenada, mas que revela um crime real e intrincado.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.49 (1).jpeg',
+    capa: 'https://cdn.dooca.store/81243/products/5ki0damoipbq3oieuyd7eyqiylpduw13simt.png?v=1771439186&webp=0',
     favorito: false
   },
   {
@@ -303,7 +303,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'Um romance de cunho social que retrata a dura realidade, a exploração e as condições de trabalho precárias dos operários nas fazendas de cacau do sul da Bahia.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.02 (2).jpeg',
+    capa: 'https://4.bp.blogspot.com/-bYn1ydvROAI/WVve8OskQWI/AAAAAAAAGVk/jM3KurbPsmIAK3pbEPZ2yHy-lFosAWo9ACLcBGAs/s1600/cacau_capa.png',
     favorito: false
   },
   {
@@ -312,7 +312,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'A épica e sangrenta saga das lutas entre coronéis pelo domínio das férteis terras cacaueiras na região de Ilhéus, um marco da literatura regionalista brasileira.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.04 (1).jpeg',
+    capa: 'https://tse2.mm.bing.net/th/id/OIP.6Jd8vtSUT5QcviHNRRRikQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -321,7 +321,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'A vida de Dona Flor, que se vê dividida entre a estabilidade pacata de seu segundo marido, o farmacêutico Teodoro, e o espírito ardente e boêmio de Vadinho, seu falecido primeiro esposo.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.03.jpeg',
+    capa: 'https://ecolivros.pt/wp-content/uploads/2025/06/16131.jpg',
     favorito: false
   },
   {
@@ -330,7 +330,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'Durante uma viagem no luxuoso Expresso do Oriente, um passageiro é brutalmente assassinado. Presos pela neve, Poirot precisa descobrir quem é o culpado em um trem onde todos os passageiros são suspeitos.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.50 (1).jpeg',
+    capa: 'https://http2.mlstatic.com/D_NQ_NP_969741-MLU69805962634_062023-O.webp',
     favorito: false
   },
   {
@@ -339,7 +339,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'O romance de estreia de Agatha Christie que introduz o detetive Hercule Poirot, chamado para desvendar o envenenamento da rica matriarca Emily Inglethorp em sua propriedade rural.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.51 (1).jpeg',
+    capa: 'https://down-br.img.susercontent.com/file/551f6119a4a2bc5566b5e0bc31ed1b9e',
     favorito: false
   },
   {
@@ -348,7 +348,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'Miss Marple recebe uma carta póstuma e uma herança do Sr. Rafiel com um desafio singular: investigar um crime não especificado do passado, guiando-se apenas por sua intuição implacável.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.49.jpeg',
+    capa: 'https://down-br.img.susercontent.com/file/2758c17e61c008a87e9fe900c2a43927',
     favorito: false
   },
   {
@@ -357,7 +357,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'Poirot enfrenta um serial killer audacioso que o desafia assinando suas cartas como \'ABC\' e assassinando suas vítimas seguindo a ordem alfabética do guia ferroviário inglês.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.51 (2).jpeg',
+    capa: 'https://down-br.img.susercontent.com/file/br-11134207-7qukw-lf774nz2p4h7d1',
     favorito: false
   },
   {
@@ -366,7 +366,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'A paz de um cruzeiro glamouroso pelo rio Nilo é destruída quando uma jovem e rica herdeira é assassinada. Cabe a Poirot desvendar uma complexa teia de ciúme e vingança.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.50.jpeg',
+    capa: 'https://down-br.img.susercontent.com/file/4b00d2e3b17bd9c604d094fa68705fb3',
     favorito: false
   },
   {
@@ -375,7 +375,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'Um dos romances policiais mais inovadores e surpreendentes já escritos. Aposentado em uma pacata vila, Poirot é obrigado a voltar à ativa para investigar a morte do homem mais rico da região.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.50 (2).jpeg',
+    capa: 'https://photos.enjoei.com.br/agatha-christie-o-assassinato-de-roger-ackroyd/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8xNzY5MTA3NC9kNWRkN2M0YjViZGEyOTkxNTgwMmY3ZmY3NWQyODkyNi5qcGc',
     favorito: false
   },
   {
@@ -384,7 +384,7 @@ export class Livros {
     autor: 'Clarice Lispector',
     genero: 'Contos',
     descricao: 'Coletânea de contos que explora as inquietações existenciais, os mistérios do cotidiano e a complexidade da alma humana, características marcantes da autora.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.52 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71vIWpo95bL._SY522_.jpg',
     favorito: false
   },
   {
@@ -393,7 +393,7 @@ export class Livros {
     autor: 'Machado de Assis',
     genero: 'Romance Realista',
     descricao: 'Narrado por um defunto autor, este clássico revolucionou a literatura brasileira com seu tom irônico e pessimista, relatando as memórias e desilusões de Brás Cubas.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.10.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71OL9RU2tJL._SY522_.jpg',
     favorito: false
   },
   {
@@ -402,7 +402,7 @@ export class Livros {
     autor: 'Machado de Assis',
     genero: 'Romance Realista',
     descricao: 'Acompanha a trajetória do ingênuo professor Rubião, que herda a fortuna de seu amigo Quincas Borba (e também seu cachorro homônimo), tornando-se alvo de parasitas sociais na corte carioca.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.10 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71CR8SCKwOL._SY522_.jpg',
     favorito: false
   },
   {
@@ -411,25 +411,17 @@ export class Livros {
     autor: 'Machado de Assis',
     genero: 'Romance Realista',
     descricao: 'O último romance de Machado de Assis, escrito em forma de diário pelo Conselheiro Aires, trazendo reflexões melancólicas sobre a velhice, o tempo, a solidão e o amor.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.09 (2).jpeg',
+    capa: 'https://meuriodetodosostempos.com.br/wp-content/uploads/2024/10/MEMORIAL-DE-AIRES-TEXTO-COMPLETO-DA-OBRA-1000x1000.jpeg',
     favorito: false
   },
-  {
-    id: 45,
-    titulo: 'Esaú e Jacó',
-    autor: 'Machado de Assis',
-    genero: 'Romance Realista',
-    descricao: 'A rivalidade entre os irmãos gêmeos Pedro e Paulo, que divergem em tudo, inclusive na política, servindo de alegoria para os conflitos do Brasil na transição do Império para a República.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.09.jpeg',
-    favorito: false
-  },
+  
   {
     id: 46,
     titulo: 'A Hora da Estrela',
     autor: 'Clarice Lispector',
     genero: 'Romance',
     descricao: 'A trágica e poética história de Macabéa, uma datilógrafa nordestina ingênua e invisível na cidade do Rio de Janeiro, narrada pelo complexo escritor Rodrigo S.M.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.53.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/51BofHhKUEL._SX342_SY445_ML2_.jpg',
     favorito: false
   },
   {
@@ -438,7 +430,7 @@ export class Livros {
     autor: 'Clarice Lispector',
     genero: 'Romance Introspectivo',
     descricao: 'Romance de estreia da autora, focado na intensa e introspectiva jornada interior de Joana, desafiando a moralidade e mergulhando fundo no fluxo de consciência.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.54 (1).jpeg',
+    capa: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDSDPe8mNBq8t0hjoTBN-aCESBKdN9H_MrUbIpZB3JdfdvsVtklrg9Zs5pRMLcrdTEVF1qayH8DqqyGzA4C8hd0PFIsz-6WLpIclZO4SACC_v6JJGv6-JCa9xAZkE1eOLQDYEgvJU6Owr0NbiBc6bM5rEBqhlT0Ja9MD48FFvZta9q7yULv7n4U-Xw3Akt/s1011/perto%20do%20cora%C3%A7%C3%A3o%20selvagem_.png',
     favorito: false
   },
   {
@@ -447,7 +439,7 @@ export class Livros {
     autor: 'Clarice Lispector',
     genero: 'Romance Existencial',
     descricao: 'Um diálogo denso e existencial entre o \'Autor\' e sua criação, Angela Pralini, discutindo os limites da ficção, a vida, a morte e o próprio ato de escrever.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.54 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/81o8NBrC88L._SL1500_.jpg',
     favorito: false
   },
   {
@@ -456,7 +448,7 @@ export class Livros {
     autor: 'Clarice Lispector',
     genero: 'Contos',
     descricao: 'Livro de contos que retrata a opressão e as rupturas nas relações familiares e cotidianas, revelando abismos psicológicos sob a aparente normalidade burguesa.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.54.jpeg',
+    capa: 'https://down-br.img.susercontent.com/file/ca9177f928de0e4ec0eb6d08979f3766',
     favorito: false
   },
   {
@@ -465,7 +457,7 @@ export class Livros {
     autor: 'Clarice Lispector',
     genero: 'Ficção/Romance Experimental',
     descricao: 'Uma obra de ficção inclassificável, onde uma pintora reflete sobre o tempo, a existência e o estado puro do ser, criando uma meditação poética e fragmentada sobre o \'instante-já\'.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.53 (2).jpeg',
+    capa: 'https://img.travessa.com.br/livro/BA/26/266789be-2068-4937-a611-5c531f282f48.jpg',
     favorito: false
   },
   {
@@ -474,7 +466,7 @@ export class Livros {
     autor: 'Miguel de Cervantes',
     genero: 'Romance/Sátira',
     descricao: 'A segunda parte das aventuras do engenhoso fidalgo Dom Quixote de La Mancha e seu fiel escudeiro Sancho Panza, aprofundando as brilhantes reflexões sobre ilusão, realidade e o poder da literatura.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.11.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71OV64B+FOL._SY466_.jpg',
     favorito: false
   },
   {
@@ -483,7 +475,7 @@ export class Livros {
     autor: 'José Saramago',
     genero: 'Romance/Ficção',
     descricao: 'O professor de história Tertuliano Máximo Afonso descobre a existência de um sósia perfeito, desencadeando uma busca obsessiva que ameaça sua própria identidade e sanidade.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.06 (2).jpeg',
+    capa: 'https://images-na.ssl-images-amazon.com/images/I/91q6Up9w6-L.jpg',
     favorito: false
   },
   {
@@ -492,7 +484,7 @@ export class Livros {
     autor: 'José Saramago',
     genero: 'Romance',
     descricao: 'O Sr. José, um modesto escriturário obcecado por colecionar recortes sobre pessoas famosas, decide iniciar uma busca frenética por uma mulher desconhecida cujo registro de nascimento ele encontrou por acaso.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.07.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/61vUBeH+2ML._SY522_.jpg',
     favorito: false
   },
   {
@@ -501,7 +493,7 @@ export class Livros {
     autor: 'José Saramago',
     genero: 'Romance/Ficção Política',
     descricao: 'Durante as eleições em uma capital não nomeada, a grande maioria dos eleitores decide votar em branco, desencadeando uma crise institucional e uma reação autoritária do governo.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.06 (1).jpeg',
+    capa: 'https://tse1.mm.bing.net/th/id/OIP.FxvlrWa258eojw5gBiBSMAHaLK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -510,7 +502,7 @@ export class Livros {
     autor: 'José Saramago',
     genero: 'Autobiografia',
     descricao: 'Neste livro autobiográfico, o Prêmio Nobel português resgata as lembranças e sentimentos de sua infância e adolescência, revelando as raízes de sua visão de mundo.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.05 (1).jpeg',
+    capa: 'https://tse2.mm.bing.net/th/id/OIP.cl5J29EM6XjBZ9VEXW48FAHaLY?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -519,7 +511,7 @@ export class Livros {
     autor: 'José Saramago',
     genero: 'Romance',
     descricao: 'Romance da juventude de Saramago, perdido por décadas, que retrata a vida cotidiana, os segredos ocultos e as frustrações dos moradores de um modesto prédio em Lisboa.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.05 (2).jpeg',
+    capa: 'https://tse4.mm.bing.net/th/id/OIP.2DHNPNr2FR3Z5VnZh1HAygHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -528,7 +520,7 @@ export class Livros {
     autor: 'F. Scott Fitzgerald',
     genero: 'Romance',
     descricao: 'Acompanha a vida de Anthony Patch e sua bela esposa Gloria, herdeiros presuntivos de uma grande fortuna, enquanto desperdiçam seus anos de juventude em excessos na Nova York da Era do Jazz.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.56 (2).jpeg',
+    capa: 'https://www.continente.pt/on/demandware.static/-/Sites-col-master-catalog/default/dwd0640c1e/images/col/484/4844195-topshot.png',
     favorito: false
   },
   {
@@ -537,7 +529,7 @@ export class Livros {
     autor: 'F. Scott Fitzgerald',
     genero: 'Romance Clássico',
     descricao: 'A trágica e deslumbrante história do misterioso milionário Jay Gatsby e sua paixão obsessiva pela inatingível Daisy Buchanan, um retrato definitivo da decadência do sonho americano nos anos 1920.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.57.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71OHAmfPPZL._SY522_.jpg',
     favorito: false
   },
   {
@@ -546,7 +538,7 @@ export class Livros {
     autor: 'F. Scott Fitzgerald',
     genero: 'Romance',
     descricao: 'O romance de estreia do autor segue o jovem e ambicioso Amory Blaine em sua jornada de autodescoberta, capturando os anseios e a desilusão da nova geração pós-Primeira Guerra Mundial.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.56 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/51RGqb42VaL._SY445_SX342_ML2_.jpg',
     favorito: false
   },
   {
@@ -555,7 +547,7 @@ export class Livros {
     autor: 'Miguel de Cervantes',
     genero: 'Romance/Sátira',
     descricao: 'O fidalgo Alonso Quijano enlouquece após ler muitos romances de cavalaria e decide se tornar um cavaleiro andante, partindo em busca de grandes aventuras com seu cavalo Rocinante e seu fiel escudeiro.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.11 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71nKL4i0BXL._SY466_.jpg',
     favorito: false
   },
   {
@@ -564,7 +556,7 @@ export class Livros {
     autor: 'Virginia Woolf',
     genero: 'Romance Modernista',
     descricao: 'Romance modernista focado na família Ramsay e suas visitas à Ilha de Skye, explorando a passagem do tempo, a percepção e as complexidades das relações humanas.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.16.jpeg',
+    capa: 'https://tse2.mm.bing.net/th/id/OIP.NI594Jd8X6LldnVQP4qJfAHaK_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -573,7 +565,7 @@ export class Livros {
     autor: 'Liev Tolstói',
     genero: 'Romance Histórico',
     descricao: 'Épico monumental que entrelaça as vidas de diversas famílias aristocráticas russas com o pano de fundo histórico da invasão napoleônica na Rússia.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.08.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71tgOXElvCL._SY522_.jpg',
     favorito: false
   },
   {
@@ -582,7 +574,7 @@ export class Livros {
     autor: 'Franz Kafka',
     genero: 'Ficção Absurda',
     descricao: 'Josef K. é subitamente preso e processado por uma autoridade inacessível, por um crime que não lhe é revelado, em uma crítica à burocracia absurda.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.58 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/81sdtrnwyAL._SY522_.jpg',
     favorito: false
   },
   {
@@ -591,7 +583,7 @@ export class Livros {
     autor: 'Franz Kafka',
     genero: 'Novela/Ficção Absurda',
     descricao: 'O caixeiro-viajante Gregor Samsa acorda certa manhã transformado em um inseto monstruoso, lidando com a repulsa e a alienação de sua própria família.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.58 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/715JOcuqSSL._SY522_.jpg',
     favorito: false
   },
   {
@@ -600,7 +592,7 @@ export class Livros {
     autor: 'Victor Hugo',
     genero: 'Romance Histórico',
     descricao: 'A emocionante jornada de redenção do ex-prisioneiro Jean Valjean, que tenta reconstruir sua vida na França do século XIX, enquanto é perseguido pelo implacável inspetor Javert.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.14 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/61DMmPssLCL._SY466_.jpg',
     favorito: false
   },
   {
@@ -609,7 +601,7 @@ export class Livros {
     autor: 'Aldous Huxley',
     genero: 'Ficção Científica/Distopia',
     descricao: 'Uma distopia assustadora onde a humanidade é geneticamente condicionada e controlada pelo consumo e prazer, sacrificando a liberdade individual em prol da estabilidade.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.52.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/61hOp6UFvCL._SL1500_.jpg',
     favorito: false
   },
   {
@@ -618,7 +610,7 @@ export class Livros {
     autor: 'Virginia Woolf',
     genero: 'Romance Modernista',
     descricao: 'A narrativa acompanha um único dia na vida da socialite Clarissa Dalloway em Londres pós-Primeira Guerra, mesclando memórias, fluxos de pensamento e preparativos para uma festa.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.15 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/91rOgmnZpJS._SY522_.jpg',
     favorito: false
   },
   {
@@ -627,7 +619,7 @@ export class Livros {
     autor: 'Virginia Woolf',
     genero: 'Ficção Histórica/Sátira',
     descricao: 'Uma biografia fantástica e satírica de um nobre inglês que vive por séculos sem envelhecer e, de forma poética, muda de sexo ao longo do tempo.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.16 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/61Gd-8noENL._SY522_.jpg',
     favorito: false
   },
   {
@@ -636,7 +628,7 @@ export class Livros {
     autor: 'Virginia Woolf',
     genero: 'Romance Experimental',
     descricao: 'Uma obra poética e experimental que acompanha as vozes entrelaçadas e os fluxos de consciência de seis personagens desde a infância até a velhice.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.14 (3).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/51--SwFOioL._SY522_.jpg',
     favorito: false
   },
   {
@@ -645,7 +637,7 @@ export class Livros {
     autor: 'Virginia Woolf',
     genero: 'Romance Modernista',
     descricao: 'O último romance da autora desenrola-se em uma casa de campo na Inglaterra, pouco antes do início da Segunda Guerra Mundial, em torno da encenação de uma peça teatral comunitária.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.15.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/71GFlXrDYEL._SY522_.jpg',
     favorito: false
   },
   {
@@ -654,7 +646,7 @@ export class Livros {
     autor: 'Jonathan Swift',
     genero: 'Sátira/Aventura',
     descricao: 'A clássica sátira em que o cirurgião naval Lemuel Gulliver viaja para mundos fantásticos, como Lilliput e Brobdingnag, criticando a natureza humana e a sociedade da época.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.02 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/61okscwfVKL._SY522_.jpg',
     favorito: false
   },
   {
@@ -663,7 +655,7 @@ export class Livros {
     autor: 'José Saramago',
     genero: 'Ficção Distópica',
     descricao: 'Uma inexplicável epidemia de \'cegueira branca\' se espalha incontrolavelmente. Em quarentena, as pessoas são levadas aos limites de sua humanidade, revelando instintos cruéis e solidários em meio ao caos.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.06.jpeg',
+    capa: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/301/257/products/4zjwemr-de948458a8a92ddcb616806197260117-640-0.webp',
     favorito: false
   },
   {
@@ -672,7 +664,7 @@ export class Livros {
     autor: 'Herman Melville',
     genero: 'Romance de Aventura',
     descricao: 'A obsessiva e trágica caçada do Capitão Ahab à monstruosa baleia branca, narrada pelo marinheiro Ishmael, explorando temas como vingança, religião e os limites do homem contra a natureza.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.00.jpeg',
+    capa: 'https://tse1.mm.bing.net/th/id/OIP.na1VQHPM9LKrgKMY3m7nIAHaLD?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -681,7 +673,7 @@ export class Livros {
     autor: 'Edgar Allan Poe',
     genero: 'Poema/Terror',
     descricao: 'O célebre poema narrativo que descreve a visita noturna de um corvo falante a um homem enlutado que sofre pela perda de sua amada Lenore, levando-o à loucura com seu refrão \'Nunca mais\'.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.55 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/51zL-mXlZOL._SY445_SX342_ML2_.jpg',
     favorito: false
   },
   {
@@ -690,7 +682,7 @@ export class Livros {
     autor: 'Edgar Allan Poe',
     genero: 'Contos/Terror',
     descricao: 'Coletânea de contos que reúne obras-primas do mistério e do terror psicológico, estabelecendo os pilares fundamentais da literatura policial e do horror moderno.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.55 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/91KawzIny1L._SL1500_.jpg',
     favorito: false
   },
   {
@@ -699,7 +691,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'A história de Antônio Balduíno, um jovem negro criado no morro do Capa-Negro, na Bahia, que se torna lutador, trabalhador e símbolo de resistência popular.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.03 (2).jpeg',
+    capa: 'https://tse2.mm.bing.net/th/id/OIP.ApWFuPLbencDji7NS5HTuQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -708,7 +700,7 @@ export class Livros {
     autor: 'Agatha Christie',
     genero: 'Ficção Policial',
     descricao: 'Após uma brincadeira com despertadores terminar em tragédia em uma mansão, Lady Eileen \'Bundle\' Brent decide investigar uma rede secreta de conspirações e assassinatos.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.51.jpeg',
+    capa: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkC0tceijSRsnPVSWGuugNAXxN2wYBUhk6t0iw-BSaZ5MpTvuKjh-PpgbvZ7104qmAze-uxtHoYgMOleJU-sDFAFOlJ7UdE3yOFvxemKdeIf6wF0LqwNetgtk_8JDNWq_BPXVyOCiL4itAXKsba5xfO9jZFc-9u6gnk8FWroVbsasIlHdSl1CfQTS7izM/s1500/81PVsARtCFL._SL1500_.jpg',
     favorito: false
   },
   {
@@ -717,7 +709,7 @@ export class Livros {
     autor: 'Machado de Assis',
     genero: 'Romance Romântico',
     descricao: 'A chegada de Helena, filha ilegítima reconhecida em testamento pelo Conselheiro Vale, transforma a rotina da família e desperta sentimentos conflitantes e proibidos em seu meio-irmão Estácio.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.09 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/61KDbIA7t6L._SY522_.jpg',
     favorito: false
   },
   {
@@ -726,7 +718,7 @@ export class Livros {
     autor: 'Machado de Assis',
     genero: 'Conto/Sátira',
     descricao: 'O respeitado médico Simão Bacamarte funda a Casa Verde, um asilo em Itaguaí, e passa a internar grande parte da população sob alegações científicas de loucura, questionando os limites da sanidade.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.10 (1).jpeg',
+    capa: 'https://down-br.img.susercontent.com/file/br-11134201-7r98o-lkvmnji5bsky7d',
     favorito: false
   },
   {
@@ -735,7 +727,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'A dura e lírica vida dos marinheiros do cais de Salvador, centrada no romance épico entre o corajoso mestre de saveiro Guma e a apaixonada Lívia, sob as bênçãos e os perigos de Iemanjá.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.04.jpeg',
+    capa: 'https://th.bing.com/th/id/R.d20d5aefc7f91cb7b5e53a0732180475?rik=WnSkqyjz6sW%2bwA&pid=ImgRaw&r=0',
     favorito: false
   },
   {
@@ -744,7 +736,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'A vida, os sonhos e os delitos de um grupo de meninos de rua abandonados em Salvador, liderados por Pedro Bala, escancarando a dura e comovente realidade social da época.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.02 (3).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/81t7altQZxL._SL1500_.jpg',
     favorito: false
   },
   {
@@ -753,7 +745,7 @@ export class Livros {
     autor: 'Jorge Amado',
     genero: 'Romance Regionalista',
     descricao: 'Na Ilhéus dos anos 1920, o romance entre o sírio Nacib e a bela e sensual retirante Gabriela se desenrola em meio às intensas transformações políticas e sociais da era dos coronéis do cacau.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.03 (1).jpeg',
+    capa: 'https://2.bp.blogspot.com/-Sviazhhqze0/T70_mXBgc5I/AAAAAAABNzw/FM0Qqe3npAI/s320/gabriela_cravo_canela.jpg',
     favorito: false
   },
   {
@@ -762,7 +754,7 @@ export class Livros {
     autor: 'Jane Austen',
     genero: 'Romance',
     descricao: 'Emma Woodhouse, uma jovem rica, inteligente e mimada, dedica-se a brincar de casamenteira em sua pequena vila, provocando uma série de mal-entendidos e confusões românticas.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.23.01.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/81TPjJ6cW+L._SL1500_.jpg',
     favorito: false
   },
   {
@@ -771,7 +763,7 @@ export class Livros {
     autor: 'Alexandre Dumas',
     genero: 'Romance Histórico/Aventura',
     descricao: 'O jovem d\'Artagnan viaja a Paris para se juntar à guarda de elite do rei, os Mosqueteiros, e acaba se unindo a Athos, Porthos e Aramis em aventuras heroicas e intrigas políticas na França do século XVII.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.52 (1).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/817bVkQAWhL._SY522_.jpg',
     favorito: false
   },
   {
@@ -780,7 +772,7 @@ export class Livros {
     autor: 'George Orwell',
     genero: 'Sátira Política',
     descricao: 'Uma sátira política em forma de fábula onde os animais de uma fazenda se rebelam contra seus donos humanos, apenas para criar uma nova tirania opressiva liderada pelos porcos.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.59 (2).jpeg',
+    capa: 'https://m.media-amazon.com/images/I/91BsZhxCRjL._SY522_.jpg',
     favorito: false
   },
   {
@@ -789,7 +781,7 @@ export class Livros {
     autor: 'George Orwell',
     genero: 'Ficção Científica/Distopia',
     descricao: 'O magistral romance distópico que acompanha Winston Smith em um regime totalitário de vigilância extrema governado pelo onipresente Grande Irmão, onde a verdade é manipulada e o pensamento livre é crime.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.59 (1).jpeg',
+    capa: 'https://tse2.mm.bing.net/th/id/OIP.8bTpGDLEYVpDlV8tD10XlQHaMF?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
     favorito: false
   },
   {
@@ -798,7 +790,7 @@ export class Livros {
     autor: 'Fiódor Dostoiévski',
     genero: 'Romance Psicológico',
     descricao: 'O ex-estudante Raskólnikov comete um duplo assassinato impulsionado por uma teoria de superioridade moral. A obra é um profundo mergulho psicológico na culpa, na paranoia e na busca por redenção.',
-    capa: 'WhatsApp Image 2026-09-08 at 16.22.58.jpeg',
+    capa: 'https://m.media-amazon.com/images/I/41xmRQi4anL._SY445_SX342_.jpg',
     favorito: false
   }
       

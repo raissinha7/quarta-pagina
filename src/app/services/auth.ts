@@ -78,6 +78,28 @@ export class Auth {
 
     return true;
   }
+  recuperarSenha(email: string, novaSenha: string): boolean {
+  const usuarioSalvo = localStorage.getItem('usuarioCadastro');
+
+  if (!usuarioSalvo) {
+    return false;
+  }
+
+  const usuario = JSON.parse(usuarioSalvo);
+
+  if (usuario.email !== email) {
+    return false;
+  }
+
+  usuario.senha = novaSenha;
+
+  localStorage.setItem(
+    'usuarioCadastro',
+    JSON.stringify(usuario)
+  );
+
+  return true;
+}
 
   logout(): void {
     localStorage.removeItem('quartapaginaLogado');

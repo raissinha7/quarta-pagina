@@ -12,6 +12,7 @@ import { Emprestimos } from './emprestimos/emprestimos';
 import { Menu } from './features/menu/menu';
 import { FinalizarEmprestimo } from './emprestimos/finalizar-emprestimo/finalizar-emprestimo';
 import { MinhaConta } from './features/minha-conta/minha-conta';
+import { RecuperarSenha } from './features/recuperar-senha/recuperar-senha';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,10 @@ export const routes: Routes = [
     path: 'home',
     component: Home,
   },
+  {
+  path: 'recuperar-senha',
+  component: RecuperarSenha
+},
   {
     path: 'login',
     component: Login

@@ -1,7 +1,7 @@
 
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Auth } from '../../../services/auth';
 import { Livros } from '../../../services/livros';
 import { Livro } from '../../../core/models/livro.model';
@@ -9,7 +9,7 @@ import { Livro } from '../../../core/models/livro.model';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
@@ -65,10 +65,36 @@ export class Login {
   }
 
   esqueciSenha(): void {
-    alert(
-      'Entre em contato com a biblioteca para recuperar sua senha.'
-    );
+  const email = prompt('Digite seu e-mail cadastrado:');
+
+  if (!email) return;
+
+  const novaSenha = prompt('Digite sua nova senha:');
+
+  if (!novaSenha || novaSenha.trim().length < 6) {
+    alert('A senha deve ter pelo menos 6 caracteres.');
+    return;
   }
+
+  const confirmarSenha = prompt('Confirme sua nova senha:');
+
+  if (novaSenha !== confirmarSenha) {
+    alert('As senhas não coincidem!');
+    return;
+  }
+
+  const sucesso = this.auth.recuperarSenha(
+    email.trim().toLowerCase(),
+    novaSenha.trim()
+  );
+
+  if (sucesso) {
+    alert('Senha alterada com sucesso! Você já pode entrar.');
+    this.senha = '';
+  } else {
+    alert('E-mail não encontrado. Verifique seu cadastro.');
+  }
+}
 
   loginGoogle(): void {
     alert('Login com Google será adicionado em breve.');
