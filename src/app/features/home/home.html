@@ -1,77 +1,81 @@
-
 <div class="home">
-  <header class="topo">
-    <span class="logo">BIBLIOTECA</span>
-  </header>
+  <section class="hero" aria-labelledby="hero-titulo">
+    <div class="hero-conteudo">
+      <h1 id="hero-titulo">Descubra um mundo<br>de histórias</h1>
+      <p>Consulte nosso acervo e solicite seu empréstimo!</p>
 
-  <section class="boas-vindas">
-    <p>Olá!</p>
-    <h1>O que você quer ler hoje?</h1>
+      <div class="busca">
+        <input
+          #termoPesquisa
+          type="search"
+          aria-label="Buscar livros"
+          placeholder="Buscar livros..."
+          (keyup.enter)="pesquisar(termoPesquisa.value)"
+        >
+        <button
+          type="button"
+          aria-label="Pesquisar"
+          (click)="pesquisar(termoPesquisa.value)"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.3"></circle>
+            <path d="m15.5 15.5 4.2 4.2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-ilustracao" aria-hidden="true">
+      <span class="livro-ilustrado livro-fundo"></span>
+      <span class="livro-ilustrado livro-meio"></span>
+      <span class="livro-ilustrado livro-frente"></span>
+    </div>
   </section>
 
-  <div class="busca">
-    <span></span>
-
-    <input
-      #termoPesquisa
-      type="text"
-      placeholder="Buscar um livro..."
-      (keyup.enter)="pesquisar(termoPesquisa.value)"
-    >
-
-    <button
-      type="button"
-      (click)="pesquisar(termoPesquisa.value)">
-      Pesquisar
-    </button>
-  </div>
-
-  <h3>Gêneros</h3>
-
-  <div class="categorias">
-    <button (click)="irParaLivros('Romance')">Romance</button>
-    <button (click)="irParaLivros('Ficção')">Ficção</button>
-    <button (click)="irParaLivros('Suspense')">Suspense</button>
-    <button (click)="irParaLivros('Fantasia')">Fantasia</button>
-    <button (click)="irParaLivros('Educação')">Educação</button>
-  </div>
-
-  <div class="banner">
-    <h2>Encontre sua próxima leitura</h2>
-    <p>Descubra novos livros e histórias incríveis.</p>
-  </div>
-
-  <div class="titulo-livros">
-    <h3>Livros em destaque</h3>
-    <a routerLink="/livros">Ver todos</a>
-  </div>
-
-  <div class="livros-destaque">
-
-    <div class="livro" (click)="irParaLivros()">
-      <img
-        src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg"
-        alt="Capa do livro O Pequeno Príncipe"
-      >
-      <p>O Pequeno Príncipe</p>
+  <section class="conteudo-home" aria-labelledby="generos-titulo">
+    <h2 id="generos-titulo">Gêneros</h2>
+    <div class="categorias">
+      <button type="button" (click)="irParaLivros('Romance')">Romance</button>
+      <button type="button" (click)="irParaLivros('Ficção')">Ficção</button>
+      <button type="button" (click)="irParaLivros('Suspense')">Suspense</button>
+      <button type="button" (click)="irParaLivros('Fantasia')">Fantasia</button>
+      <button type="button" (click)="irParaLivros('Educação')">Educação</button>
     </div>
 
-    <div class="livro" (click)="irParaLivros()">
-      <img
-        src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg"
-        alt="Capa do livro Harry Potter"
-      >
-      <p>Harry Potter</p>
+    <section class="banner" aria-label="Descubra novos livros">
+      <h2>Encontre sua próxima leitura</h2>
+      <p>Descubra novos livros e histórias incríveis.</p>
+    </section>
+
+    <div class="titulo-livros">
+      <h2>Livros em destaque</h2>
+      <a routerLink="/livros">Ver todos</a>
     </div>
 
-    <div class="livro" (click)="irParaLivros()">
-      <img
-        src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg"
-        alt="Capa do livro Dom Casmurro"
-      >
-      <p>Dom Casmurro</p>
+    <div class="livros-destaque">
+      <button class="livro" type="button" (click)="irParaLivros()">
+        <img
+          src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg"
+          alt="Capa do livro O Pequeno Príncipe"
+        >
+        <span>O Pequeno Príncipe</span>
+      </button>
+
+      <button class="livro" type="button" (click)="irParaLivros()">
+        <img
+          src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg"
+          alt="Capa do livro Harry Potter"
+        >
+        <span>Harry Potter</span>
+      </button>
+
+      <button class="livro" type="button" (click)="irParaLivros()">
+        <img
+          src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg"
+          alt="Capa do livro Dom Casmurro"
+        >
+        <span>Dom Casmurro</span>
+      </button>
     </div>
-
-  </div>
-
+  </section>
 </div>
