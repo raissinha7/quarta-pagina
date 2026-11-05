@@ -1,99 +1,252 @@
-.auth-container {
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.container {
   min-height: 100vh;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 32px;
+  background: #f4f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.cadastro-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(360px, 1.15fr);
+  width: min(100%, 900px);
+  min-height: 540px;
+  margin: auto 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 36px rgba(15, 76, 92, 0.12);
+}
+
+.painel-boas-vindas {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #f5f8fb;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.auth-card {
-  width: 100%;
-  max-width: 420px;
-  background-color: white;
-  padding: 35px 40px;
-  border-radius: 14px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
-}
-
-/* Título */
-.auth-card h1 {
+  justify-content: center;
+  gap: 30px;
+  padding: 48px 36px;
+  color: #fff;
   text-align: center;
+  background: linear-gradient(110deg, #0f4c5c, #176b7d);
+}
+
+.painel-boas-vindas h1 {
+  margin: 0 0 14px;
   font-size: 28px;
-  margin: 0 0 25px;
-  color: #34495e;
 }
 
-.auth-card h2 {
-  font-size: 21px;
-  margin: 0 0 8px;
-  color: #3d4d5d;
+.painel-boas-vindas p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.auth-card p {
-  font-size: 14px;
-  color: #777;
-  margin: 0 0 20px;
+.btn-login {
+  width: min(100%, 180px);
+  min-height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  color: #fff;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-/* Campos */
-.auth-card input {
-  width: 100%;
-  height: 42px;
-  padding: 0 13px;
-  margin-bottom: 13px;
-  box-sizing: border-box;
+.btn-login:hover {
+  color: #0f4c5c;
+  background: #fff;
+}
 
-  border: 1px solid #d9dfe5;
-  border-radius: 7px;
-  outline: none;
-
-  font-size: 14px;
+.formulario-cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(100% - 64px, 390px);
+  margin: 0 auto;
+  padding: 48px 0;
   color: #333;
-  background-color: #fafafa;
 }
 
-.auth-card input:focus {
-  border-color: #7f9db5;
-  background-color: white;
-}
-
-/* Botão */
-.auth-card button {
-  width: 100%;
-  height: 42px;
-  margin-top: 5px;
-
-  border: none;
-  border-radius: 7px;
-
-  background-color: #6f91ad;
-  color: white;
-
+.marca {
+  margin: 0 0 6px;
+  color: #0f4c5c;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
+}
 
+.formulario-cadastro h2 {
+  margin: 0;
+  color: #083b49;
+  font-size: 28px;
+  text-align: center;
+}
+
+.subtitulo {
+  margin: 12px 0 24px;
+  color: #858585;
+  font-size: 14px;
+  text-align: center;
+}
+
+.formulario-cadastro form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.campos-endereco {
+  display: grid;
+  gap: 12px;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  background: #f3f5f5;
+  color: #45666e;
+}
+
+.campo:focus-within {
+  border-color: #176b7d;
+}
+
+.campo i {
+  width: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.campo input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #333;
+  font: inherit;
+  font-size: 14px;
+}
+
+.campo input::placeholder {
+  color: #737d80;
+  opacity: 1;
+}
+
+.btn-consultar-cep {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #155564;
+  font-size: 13px;
+  font-weight: 700;
   cursor: pointer;
 }
 
-.auth-card button:hover {
-  background-color: #5d7f9b;
+.btn-consultar-cep:disabled {
+  color: #71878c;
+  cursor: wait;
 }
 
-/* Texto inferior */
-.auth-card p:last-child {
+.mensagem-cep {
+  margin: -4px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.erro-cep {
+  color: #a12c2c;
+}
+
+.link-endereco-manual {
+  align-self: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #155564;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-cadastrar {
+  align-self: center;
+  width: min(100%, 180px);
+  min-height: 42px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 24px;
+  color: #fff;
+  background: #155564;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cadastrar:hover {
+  background: #104653;
+}
+
+.link-login {
+  margin: 22px 0 0;
+  color: #777;
+  font-size: 13px;
   text-align: center;
-  margin: 20px 0 0;
 }
 
-.auth-card a {
-  color: #6f91ad;
-  font-weight: 600;
+.link-login a {
+  color: #155564;
+  font-weight: 700;
   text-decoration: none;
 }
 
-.auth-card a:hover {
+.link-login a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 16px;
+  }
+
+  .cadastro-card {
+    grid-template-columns: 1fr;
+    width: min(100%, 480px);
+  }
+
+  .painel-boas-vindas {
+    gap: 16px;
+    padding: 28px 24px;
+  }
+
+  .painel-boas-vindas h1 {
+    font-size: 24px;
+  }
+
+  .painel-boas-vindas p {
+    margin: 6px 0;
+  }
+
+  .formulario-cadastro {
+    width: calc(100% - 48px);
+    padding: 36px 0;
+  }
 }

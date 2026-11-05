@@ -33,19 +33,28 @@
   </section>
 
   <section class="conteudo-home" aria-labelledby="generos-titulo">
-    <h2 id="generos-titulo">Gêneros</h2>
-    <div class="categorias">
-      <button type="button" (click)="irParaLivros('Romance')">Romance</button>
-      <button type="button" (click)="irParaLivros('Ficção')">Ficção</button>
-      <button type="button" (click)="irParaLivros('Suspense')">Suspense</button>
-      <button type="button" (click)="irParaLivros('Fantasia')">Fantasia</button>
-      <button type="button" (click)="irParaLivros('Educação')">Educação</button>
-    </div>
-
     <section class="banner" aria-label="Descubra novos livros">
       <h2>Encontre sua próxima leitura</h2>
       <p>Descubra novos livros e histórias incríveis.</p>
     </section>
+
+    <details class="gaveta-generos">
+      <summary id="generos-titulo">Gêneros</summary>
+      <div class="categorias">
+        @for (grupo of gruposDeGeneros(); track grupo.nome) {
+          <section class="grupo-genero">
+            <h3>{{ grupo.nome }}</h3>
+            <div class="generos-disponiveis">
+              @for (genero of grupo.generos; track genero) {
+                <button type="button" (click)="irParaLivros(genero)">{{ genero }}</button>
+              }
+            </div>
+          </section>
+        } @empty {
+          <p class="sem-generos">Nenhum gênero disponível no acervo.</p>
+        }
+      </div>
+    </details>
 
     <div class="titulo-livros">
       <h2>Livros em destaque</h2>

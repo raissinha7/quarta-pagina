@@ -2,3 +2,34 @@
 <main>
   <router-outlet></router-outlet>
 </main>
+
+<footer class="rodape">
+  <div class="rodape-conteudo">
+    <section class="rodape-marca" aria-labelledby="rodape-titulo">
+      <a class="rodape-identidade" routerLink="/home">
+        <img src="/icone-logo-quarta-pagina.png" alt="">
+        <span id="rodape-titulo">Quarta Página</span>
+      </a>
+      <p>Um espaço para descobrir sua próxima leitura.</p>
+    </section>
+
+    <nav class="rodape-links" aria-label="Links do rodapé">
+      <h2>Navegue</h2>
+      <a routerLink="/home">Início</a>
+      <a routerLink="/livros">Explorar livros</a>
+      <a routerLink="/minha-conta">Minha conta</a>
+    </nav>
+
+    <section class="rodape-contato" aria-labelledby="rodape-contato-titulo">
+      <h2 id="rodape-contato-titulo">Contato demonstrativo</h2>
+      <p><a href="mailto:contato@quartapagina.example">contato@quartapagina.example</a></p>
+      <p><a href="tel:+551140001234">(11) 4000-1234</a></p>
+      <p class="aviso-ficticio">Dados fictícios para ilustração.</p>
+    </section>
+  </div>
+
+  <div class="rodape-base">
+    <p>© 2026 Quarta Página</p>
+    <p>Projeto demonstrativo</p>
+  </div>
+</footer>

@@ -1,32 +1,85 @@
 <div class="pagina-conta">
-  <div class="cartao-conta">
-    <div class="avatar">👤</div>
+  <h1 class="titulo-conta">Minha conta</h1>
 
-    <h1>Minha conta</h1>
-    <p class="subtitulo">Seus dados pessoais</p>
+  <div class="secoes-conta">
+    <details class="secao-conta">
+      <summary>Dados pessoais</summary>
+      <section class="cartao-conta">
+        @if (usuario) {
+          <div class="seletor-avatar">
+            <div class="avatar" aria-hidden="true">{{ avatarSelecionado }}</div>
+            <p>Escolha seu avatar</p>
+            <div class="opcoes-avatar" role="group" aria-label="Escolha seu avatar">
+              @for (avatar of avatares; track avatar) {
+                <button
+                  type="button"
+                  class="opcao-avatar"
+                  [class.selecionado]="avatar === avatarSelecionado"
+                  [attr.aria-label]="'Usar avatar ' + avatar"
+                  [attr.aria-pressed]="avatar === avatarSelecionado"
+                  (click)="selecionarAvatar(avatar)"
+                >
+                  {{ avatar }}
+                </button>
+              }
+            </div>
+          </div>
 
-    @if (usuario) {
-      <div class="campo">
-        <label>Nome completo</label>
-        <p>{{ usuario.nome }}</p>
-      </div>
+          <div class="campo">
+            <label>Nome completo</label>
+            <p>{{ usuario.nome }}</p>
+          </div>
 
-      <div class="campo">
-        <label>E-mail</label>
-        <p>{{ usuario.email }}</p>
-      </div>
+          <div class="campo">
+            <label>E-mail</label>
+            <p>{{ usuario.email }}</p>
+          </div>
 
-      <div class="campo">
-        <label>Endereço</label>
-        <p>{{ usuario.endereco || 'Endereço não informado' }}</p>
-      </div>
-    } @else {
-      <p>Não encontramos os dados do cadastro.</p>
-    }
+          <div class="campo">
+            <label>Celular</label>
+            <p>{{ usuario.celular || 'Celular não informado' }}</p>
+          </div>
 
-    <a routerLink="/home" class="botao-voltar">Voltar ao início</a>
-    <button type="button" class="botao-sair" (click)="sair()">
-      Sair da conta
-    </button>
+          @if (usuario.telefone) {
+            <div class="campo">
+              <label>Telefone</label>
+              <p>{{ usuario.telefone }}</p>
+            </div>
+          }
+
+          @if (usuario.cep) {
+            <div class="campo">
+              <label>CEP</label>
+              <p>{{ usuario.cep }}</p>
+            </div>
+          }
+
+          <div class="campo">
+            <label>Endereço</label>
+            <p>{{ usuario.endereco || 'Endereço não informado' }}</p>
+          </div>
+        } @else {
+          <p>Não encontramos os dados do cadastro.</p>
+        }
+
+        <a routerLink="/home" class="botao-voltar">Voltar ao início</a>
+        <button type="button" class="botao-sair" (click)="sair()">
+          Sair da conta
+        </button>
+        <button type="button" class="botao-excluir" (click)="excluirConta()">
+          Excluir conta
+        </button>
+      </section>
+    </details>
+
+    <details class="secao-conta">
+      <summary>Favoritos</summary>
+      <app-favoritos></app-favoritos>
+    </details>
+
+    <details class="secao-conta">
+      <summary>Empréstimos</summary>
+      <app-emprestimos></app-emprestimos>
+    </details>
   </div>
 </div>

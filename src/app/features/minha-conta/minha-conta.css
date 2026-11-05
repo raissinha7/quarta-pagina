@@ -6,10 +6,46 @@
   font-family: Arial, sans-serif;
 }
 
+.titulo-conta {
+  margin: 0 0 22px;
+  color: #0f4c5c;
+  text-align: center;
+}
+
+.secoes-conta {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.secao-conta {
+  overflow: hidden;
+  border: 1px solid #d2e4e7;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.secao-conta > summary {
+  padding: 16px 20px;
+  color: #0f4c5c;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secao-conta > summary:hover {
+  background: #e5f2f4;
+}
+
+.secao-conta > summary:focus-visible {
+  outline: 3px solid #176b7d;
+  outline-offset: -3px;
+}
+
 .cartao-conta {
   max-width: 480px;
-  margin: 0 auto;
-  padding: 30px;
+  margin: 0 auto 20px;
+  padding: 24px;
   background: #ffffff;
   border: 1px solid #e0edef;
   border-radius: 18px;
@@ -19,7 +55,7 @@
 .avatar {
   width: 65px;
   height: 65px;
-  margin: 0 auto 15px;
+  margin: 0 auto 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,19 +64,51 @@
   font-size: 30px;
 }
 
-.cartao-conta h1,
-.subtitulo {
+.seletor-avatar {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.cartao-conta h1 {
-  color: #0f4c5c;
-  margin-bottom: 8px;
+.seletor-avatar > p {
+  margin: 0 0 10px;
+  color: #71818b;
+  font-size: 13px;
 }
 
-.subtitulo {
-  color: #71818b;
-  margin-bottom: 30px;
+.opcoes-avatar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.opcao-avatar {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d2e4e7;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.opcao-avatar.selecionado {
+  border: 2px solid #0f4c5c;
+  background: #e5f2f4;
+}
+
+.opcao-avatar:focus-visible {
+  outline: 3px solid #176b7d;
+  outline-offset: 2px;
+}
+
+.cartao-conta h2 {
+  text-align: center;
+}
+
+.cartao-conta h2 {
+  color: #0f4c5c;
+  margin-bottom: 8px;
 }
 
 .campo {
@@ -61,7 +129,8 @@
 }
 
 .botao-voltar,
-.botao-sair {
+.botao-sair,
+.botao-excluir {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -84,4 +153,14 @@
   background: white;
   color: #0f4c5c;
   border: 1px solid #0f4c5c;
+}
+
+.botao-excluir {
+  background: #fff;
+  color: #a12c2c;
+  border: 1px solid #a12c2c;
+}
+
+.botao-excluir:hover {
+  background: #fff3f3;
 }

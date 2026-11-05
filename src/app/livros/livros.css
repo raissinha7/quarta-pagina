@@ -23,6 +23,11 @@
   margin-bottom: 25px;
 }
 
+.cabecalho-catalogo {
+  max-width: 1310px;
+  margin: 0 auto;
+}
+
 /* =========================
    GRADE DE LIVROS
 ========================= */
@@ -107,6 +112,14 @@
   background: #d9eff3;
   padding: 5px 12px;
   border-radius: 20px;
+}
+
+.info-livro .preco-aluguel,
+.texto-detalhes .preco-aluguel {
+  align-self: flex-start;
+  color: #0f4c5c;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 /* =========================

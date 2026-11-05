@@ -1,8 +1,5 @@
 :host {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 900;
+  display: block;
 }
 
 /* BOTÃO DE ABRIR */

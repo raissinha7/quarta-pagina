@@ -834,6 +834,44 @@ export class Livros {
     );
   }
 
+  processarAcaoPendente(): 'aluguel' | 'favorito' | null {
+    if (!this.auth.estaLogado()) {
+      throw new Error('É necessário entrar na conta para concluir a ação.');
+    }
+
+    const aluguelPendente = localStorage.getItem('livroPendenteEmprestimo');
+
+    if (aluguelPendente) {
+      const livroPendente: Livro = JSON.parse(aluguelPendente);
+      const livro = this.livros().find(item => item.id === livroPendente.id);
+
+      if (!livro) {
+        throw new Error('O livro selecionado para aluguel não foi encontrado.');
+      }
+
+      this.adicionarEmprestimo(livro);
+      localStorage.removeItem('livroPendenteEmprestimo');
+      localStorage.removeItem('retornarAoEmprestimo');
+      return 'aluguel';
+    }
+
+    const favoritoPendente = localStorage.getItem('livroPendenteFavorito');
+
+    if (favoritoPendente) {
+      const id = Number(favoritoPendente);
+
+      if (!Number.isInteger(id) || !this.livros().some(livro => livro.id === id)) {
+        throw new Error('O livro selecionado como favorito não foi encontrado.');
+      }
+
+      this.alternaFavorito(id);
+      localStorage.removeItem('livroPendenteFavorito');
+      return 'favorito';
+    }
+
+    return null;
+  }
+
   adicionarEmprestimo(livro: Livro): boolean {
     if (!this.auth.estaLogado()) {
       return false;
@@ -854,6 +892,18 @@ export class Livros {
     this.emprestimos.update(lista =>
       lista.filter(livro => livro.id !== id)
     );
+  }
+
+  limparDadosUsuario(): void {
+    this.livros.update(lista =>
+      lista.map(livro => ({ ...livro, favorito: false }))
+    );
+    this.emprestimos.set([]);
+    this.historicoEmprestimos.set([]);
+    localStorage.removeItem('historicoEmprestimos');
+    localStorage.removeItem('livroPendenteEmprestimo');
+    localStorage.removeItem('livroPendenteFavorito');
+    localStorage.removeItem('retornarAoEmprestimo');
   }
 
   confirmarEmprestimo(

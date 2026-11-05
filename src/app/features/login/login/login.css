@@ -49,6 +49,7 @@ form {
 }
 
 label {
+  text-align: left;
   font-size: 13px;
   font-weight: bold;
   margin-bottom: 7px;
@@ -160,9 +161,29 @@ label {
   background: #f2f7f8;
 }
 
+.sociais button:focus-visible {
+  outline: 3px solid #176b7d;
+  outline-offset: 3px;
+}
+
+.sociais svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.icone-facebook {
+  fill: #1877f2;
+}
+
 /* CADASTRO */
 
 .cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   text-align: center;
   margin-top: 30px;
   color: #777;
@@ -172,6 +193,7 @@ label {
 .cadastro button {
   border: none;
   background: none;
+  padding: 0;
   color: #155564;
   font-weight: bold;
   font-size: 12px;
@@ -183,32 +205,29 @@ label {
 }
 .acesso-admin {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 25px;
+  gap: 4px;
+  margin-top: 12px;
+  color: #777;
+  font-size: 12px;
   text-align: center;
 }
 
 .acesso-admin span {
-  color: #687780;
-  font-size: 14px;
+  color: inherit;
 }
 
 .acesso-admin button {
-  background: transparent;
-  color: #0b5263;
-  border: 1px solid #0b5263;
-  border-radius: 8px;
-  padding: 11px 24px;
-  font-size: 14px;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #155564;
   font-weight: bold;
+  font-size: 12px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .acesso-admin button:hover {
-  background: #0b5263;
-  color: white;
+  text-decoration: underline;
 }

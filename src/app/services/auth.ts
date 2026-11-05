@@ -66,11 +66,22 @@ export class Auth {
     nome: string,
     email: string,
     senha: string,
-    endereco: string
+    endereco: string,
+    telefone: string,
+    celular: string,
+    cep: string
   ): boolean {
     localStorage.setItem(
       'usuarioCadastro',
-      JSON.stringify({ nome, email, senha, endereco })
+      JSON.stringify({
+        nome,
+        email,
+        senha,
+        endereco,
+        telefone,
+        celular,
+        cep
+      })
     );
 
     localStorage.setItem('quartapaginaLogado', 'true');

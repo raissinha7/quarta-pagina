@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Auth } from '../../../services/auth';
 import { Livros } from '../../../services/livros';
-import { Livro } from '../../../core/models/livro.model';
 
 @Component({
   selector: 'app-login',
@@ -35,22 +34,25 @@ export class Login {
       return;
     }
 
-    const pendente = localStorage.getItem(
-      'livroPendenteEmprestimo'
-    );
+    let acaoPendente: 'aluguel' | 'favorito' | null;
 
-    if (pendente) {
-      try {
-        const livro: Livro = JSON.parse(pendente);
+    try {
+      acaoPendente = this.livrosService.processarAcaoPendente();
+    } catch (erro) {
+      console.error('Erro ao processar a ação pendente:', erro);
+      alert('Seu login foi realizado, mas não foi possível concluir a ação no livro.');
+      this.router.navigate(['/home']);
+      return;
+    }
 
-        this.livrosService.adicionarEmprestimo(livro);
-        localStorage.removeItem('livroPendenteEmprestimo');
+    if (acaoPendente === 'aluguel') {
+      this.router.navigate(['/emprestimos']);
+      return;
+    }
 
-        this.router.navigate(['/emprestimos']);
-        return;
-      } catch (erro) {
-        console.error('Erro ao recuperar o livro pendente:', erro);
-      }
+    if (acaoPendente === 'favorito') {
+      this.router.navigate(['/favoritos']);
+      return;
     }
 
     this.router.navigate(['/minha-conta']);

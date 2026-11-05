@@ -26,6 +26,7 @@ export class LivrosComponent {
   );
 
   readonly livroSelecionado = signal<Livro | null>(null);
+  readonly precoAluguelIlustrativo = 'R$ 5,00 / dia';
 
   abrirDetalhes(livro: Livro): void {
     this.livroSelecionado.set(livro);
@@ -61,17 +62,26 @@ export class LivrosComponent {
   });
 
   favoritar(id: number): void {
+    if (!this.auth.estaLogado()) {
+      localStorage.removeItem('livroPendenteEmprestimo');
+      localStorage.removeItem('retornarAoEmprestimo');
+      localStorage.setItem('livroPendenteFavorito', String(id));
+      this.router.navigate(['/cadastro']);
+      return;
+    }
+
     this.livrosService.alternaFavorito(id);
   }
 
   emprestar(livro: Livro): void {
     if (!this.auth.estaLogado()) {
+      localStorage.removeItem('livroPendenteFavorito');
       localStorage.setItem(
         'livroPendenteEmprestimo',
         JSON.stringify(livro)
       );
 
-      this.router.navigate(['/login']);
+      this.router.navigate(['/cadastro']);
       return;
     }
 

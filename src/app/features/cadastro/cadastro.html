@@ -1,47 +1,219 @@
-<div class="container">
+<main class="container">
+  <section class="cadastro-card" aria-label="Cadastro">
+    <aside class="painel-boas-vindas">
+      <div>
+        <h1>Bem-vindo!</h1>
+        <p>Crie sua conta e venha fazer parte da Quarta Página.</p>
+        <p>Cadastre-se para realizar empréstimos.</p>
+      </div>
 
-  <div class="cadastro-card">
+      <button type="button" class="btn-login" routerLink="/login">
+        ENTRAR
+      </button>
+    </aside>
 
-    <h1>Quarta Página</h1>
+    <div class="formulario-cadastro">
+      <p class="marca">Quarta Página</p>
+      <h2>Cadastre-se</h2>
+      <p class="subtitulo">Crie sua conta para realizar empréstimos.</p>
 
-    <h2>Cadastre-se</h2>
+      <form (ngSubmit)="cadastrar()">
+        <label class="campo">
+          <i class="fas fa-user" aria-hidden="true"></i>
+          <input
+            type="text"
+            name="nome"
+            placeholder="Nome"
+            aria-label="Nome"
+            [(ngModel)]="nome"
+            required
+          >
+        </label>
 
-    <p>Crie sua conta para realizar empréstimos.</p>
+        <label class="campo">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            aria-label="E-mail"
+            [(ngModel)]="email"
+            required
+          >
+        </label>
 
-    <input
-      type="text"
-      placeholder="Nome"
-      [(ngModel)]="nome"
-    >
+        <label class="campo">
+          <i class="fas fa-lock" aria-hidden="true"></i>
+          <input
+            type="password"
+            name="senha"
+            placeholder="Senha"
+            aria-label="Senha"
+            [(ngModel)]="senha"
+            required
+          >
+        </label>
 
-    <input
-      type="email"
-      placeholder="E-mail"
-      [(ngModel)]="email"
-    >
+        <label class="campo">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <input
+            type="tel"
+            name="telefone"
+            placeholder="Telefone (opcional)"
+            aria-label="Telefone (opcional)"
+            autocomplete="tel"
+            inputmode="tel"
+            maxlength="14"
+            [ngModel]="telefone"
+            (ngModelChange)="formatarTelefone($event)"
+          >
+        </label>
 
-    <input
-      type="password"
-      placeholder="Senha"
-      [(ngModel)]="senha"
-    >
-    <input
-  type="text"
-  name="endereco"
-  [(ngModel)]="endereco"
-  placeholder="Seu endereço"
-  required
->
+        <label class="campo">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+          <input
+            type="tel"
+            name="celular"
+            placeholder="Celular (11) 99999-9999"
+            aria-label="Celular"
+            autocomplete="tel-national"
+            inputmode="tel"
+            maxlength="15"
+            [ngModel]="celular"
+            (ngModelChange)="formatarCelular($event)"
+            required
+          >
+        </label>
 
-    <button (click)="cadastrar()">
-      Cadastrar
-    </button>
+        <label class="campo">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <input
+            type="text"
+            name="cep"
+            placeholder="CEP"
+            aria-label="CEP"
+            inputmode="numeric"
+            autocomplete="postal-code"
+            maxlength="9"
+            [required]="!preencherEnderecoManual"
+            [(ngModel)]="cep"
+            (ngModelChange)="alterarCep($event)"
+          >
+        </label>
 
-    <p>
-      Já possui uma conta?
-      <a routerLink="/login">Entrar</a>
-    </p>
+        <button
+          type="button"
+          class="btn-consultar-cep"
+          [disabled]="consultandoCep || preencherEnderecoManual"
+          (click)="consultarCep()"
+        >
+          {{ consultandoCep ? 'Consultando CEP...' : 'Consultar CEP' }}
+        </button>
 
-  </div>
+        @if (erroCep) {
+          <p class="mensagem-cep erro-cep" role="alert">{{ erroCep }}</p>
+        }
 
-</div>
+        @if (enderecoLocalizado || preencherEnderecoManual) {
+          <div class="campos-endereco">
+            <label class="campo">
+              <i class="fas fa-road" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="logradouro"
+                placeholder="Rua / Avenida"
+                aria-label="Rua ou avenida"
+                autocomplete="address-line1"
+                [(ngModel)]="logradouro"
+                required
+              >
+            </label>
+
+            <label class="campo">
+              <i class="fas fa-hashtag" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="numero"
+                placeholder="Número"
+                aria-label="Número"
+                [(ngModel)]="numero"
+                required
+              >
+            </label>
+
+            <label class="campo">
+              <i class="fas fa-map" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="bairro"
+                placeholder="Bairro"
+                aria-label="Bairro"
+                autocomplete="address-level3"
+                [(ngModel)]="bairro"
+                required
+              >
+            </label>
+
+            <label class="campo">
+              <i class="fas fa-city" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="cidade"
+                placeholder="Cidade"
+                aria-label="Cidade"
+                autocomplete="address-level2"
+                [(ngModel)]="cidade"
+                required
+              >
+            </label>
+
+            <label class="campo">
+              <i class="fas fa-map" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="estado"
+                placeholder="Estado (UF)"
+                aria-label="Estado"
+                autocomplete="address-level1"
+                maxlength="2"
+                [(ngModel)]="estado"
+                required
+              >
+            </label>
+
+            <label class="campo">
+              <i class="fas fa-sticky-note" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="complemento"
+                placeholder="Complemento (opcional)"
+                aria-label="Complemento opcional"
+                autocomplete="address-line2"
+                [(ngModel)]="complemento"
+              >
+            </label>
+          </div>
+        }
+
+        <button
+          type="button"
+          class="link-endereco-manual"
+          (click)="alternarEnderecoManual()"
+        >
+          {{ preencherEnderecoManual
+            ? 'Usar consulta por CEP'
+            : 'Não sei meu CEP ou não consegui consultar' }}
+        </button>
+
+        <button type="submit" class="btn-cadastrar">
+          Cadastrar
+        </button>
+      </form>
+
+      <p class="link-login">
+        Já possui uma conta?
+        <a routerLink="/login">Entrar</a>
+      </p>
+    </div>
+  </section>
+</main>

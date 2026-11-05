@@ -1,3 +1,124 @@
+:host {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.rodape {
+  padding: 34px clamp(20px, 5vw, 64px) 0;
+  background: #083b49;
+  color: #e5f2f4;
+  font-size: 14px;
+}
+
+.rodape-conteudo {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1fr;
+  gap: 36px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+}
+
+.rodape-identidade {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rodape-identidade img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.rodape-marca p,
+.rodape-contato p {
+  margin: 10px 0 0;
+  color: #c6dce0;
+  line-height: 1.5;
+}
+
+.rodape h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.rodape-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.rodape-links a,
+.rodape-contato a {
+  color: #e5f2f4;
+  text-decoration: none;
+}
+
+.rodape-links a:hover,
+.rodape-contato a:hover {
+  text-decoration: underline;
+}
+
+.rodape-contato .aviso-ficticio {
+  margin-top: 12px;
+  color: #9ec4cb;
+  font-size: 12px;
+}
+
+.rodape-base {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 0;
+  border-top: 1px solid rgba(229, 242, 244, 0.2);
+  color: #9ec4cb;
+  font-size: 12px;
+}
+
+.rodape-base p {
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .rodape-conteudo {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .rodape-marca {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 400px) {
+  .rodape-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape-marca {
+    grid-column: auto;
+  }
+
+  .rodape-base {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
