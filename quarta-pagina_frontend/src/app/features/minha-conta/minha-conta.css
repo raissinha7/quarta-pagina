@@ -1,36 +1,66 @@
+
 .pagina-conta {
   min-height: 100vh;
+  width: 100%;
   box-sizing: border-box;
-  padding: 40px 20px;
+  padding: 40px;
   background: #f4f9fa;
   font-family: Arial, sans-serif;
 }
 
 .cartao-conta {
-  max-width: 480px;
+  width: 100%;
+  min-height: calc(100vh - 80px);
   margin: 0 auto;
-  padding: 30px;
+  padding: 40px 60px;
   background: #ffffff;
   border: 1px solid #e0edef;
   border-radius: 18px;
   box-shadow: 0 5px 18px rgba(15, 76, 92, 0.09);
+  box-sizing: border-box;
 }
 
-.avatar {
-  width: 65px;
-  height: 65px;
+/* PERFIL */
+
+.perfil-topo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.foto-container {
+  width: 100px;
+  height: 100px;
+  position: relative;
   margin: 0 auto 15px;
+}
+
+.avatar,
+.foto-perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   background: #e0f1f6;
-  font-size: 30px;
+  font-size: 40px;
+  object-fit: cover;
 }
 
-.cartao-conta h1,
-.subtitulo {
-  text-align: center;
+.botao-foto {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f4c5c;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .cartao-conta h1 {
@@ -40,48 +70,150 @@
 
 .subtitulo {
   color: #71818b;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
+
+/* DADOS */
 
 .campo {
   padding: 13px 0;
   border-bottom: 1px solid #e5eef2;
 }
 
-.campo label {
+.campo label,
+.formulario-edicao label,
+.secao-senha label {
+  display: block;
   color: #71818b;
   font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 7px;
 }
 
 .campo p {
   color: #183b47;
   font-size: 15px;
   overflow-wrap: anywhere;
-  margin-bottom: 0;
+  margin: 0;
 }
 
+/* FORMULÁRIOS */
+
+.formulario-edicao,
+.secao-senha {
+  margin-top: 25px;
+}
+
+.formulario-edicao h2,
+.secao-senha h2 {
+  color: #0f4c5c;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.formulario-edicao input,
+.secao-senha input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #dce7ea;
+  border-radius: 8px;
+  background: #f8fafb;
+  outline: none;
+  font-size: 14px;
+  color: #183b47;
+}
+
+.formulario-edicao input:focus,
+.secao-senha input:focus {
+  border-color: #0f4c5c;
+}
+
+.formulario-edicao input:disabled {
+  background: #edf1f2;
+  color: #89969b;
+}
+
+/* BOTÕES */
+
+.botao-principal,
+.botao-secundario,
+.botao-cancelar,
 .botao-voltar,
 .botao-sair {
   display: block;
   width: 100%;
   box-sizing: border-box;
   padding: 13px;
-  margin-top: 18px;
+  margin-top: 15px;
   border-radius: 9px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+.botao-principal,
 .botao-voltar {
   background: #0f4c5c;
   color: white;
+  border: none;
   text-decoration: none;
 }
 
+.botao-principal:hover,
+.botao-voltar:hover {
+  background: #155564;
+}
+
+.botao-secundario,
+.botao-cancelar,
 .botao-sair {
   background: white;
   color: #0f4c5c;
   border: 1px solid #0f4c5c;
+}
+
+.botao-secundario:hover,
+.botao-cancelar:hover,
+.botao-sair:hover {
+  background: #edf6f7;
+}
+
+.secao-senha p {
+  color: #71818b;
+  font-size: 14px;
+}
+
+/* AÇÕES */
+
+.acoes-conta {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #e5eef2;
+}
+
+.botao-voltar,
+.botao-sair {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+  .pagina-conta {
+    padding: 12px;
+  }
+
+  .cartao-conta {
+    padding: 25px 18px;
+    min-height: calc(100vh - 24px);
+  }
 }

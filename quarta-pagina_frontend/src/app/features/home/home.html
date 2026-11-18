@@ -1,39 +1,43 @@
-<div class="home">
-  <section class="hero" aria-labelledby="hero-titulo">
-    <div class="hero-conteudo">
-      <h1 id="hero-titulo">Descubra um mundo<br>de histórias</h1>
-      <p>Consulte nosso acervo e solicite seu empréstimo!</p>
 
-      <div class="busca">
-        <input
-          #termoPesquisa
-          type="search"
-          aria-label="Buscar livros"
-          placeholder="Buscar livros..."
-          (keyup.enter)="pesquisar(termoPesquisa.value)"
-        >
-        <button
-          type="button"
-          aria-label="Pesquisar"
-          (click)="pesquisar(termoPesquisa.value)"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10.8" cy="10.8" r="6.3"></circle>
-            <path d="m15.5 15.5 4.2 4.2"></path>
-          </svg>
-        </button>
-      </div>
+<div class="home">
+
+  <section class="apresentacao">
+    <div class="biblioteca">
+      <h2>BIBLIOTECA</h2>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.8 8.8c0 4.2-8.8 10-8.8 10S3.2 13 3.2 8.8A4.3 4.3 0 0 1 12 6.7a4.3 4.3 0 0 1 8.8 2.1Z"/>
+      </svg>
     </div>
 
-    <div class="hero-ilustracao" aria-hidden="true">
-      <span class="livro-ilustrado livro-fundo"></span>
-      <span class="livro-ilustrado livro-meio"></span>
-      <span class="livro-ilustrado livro-frente"></span>
+    <p class="saudacao">Olá!</p>
+
+    <h1>O que você quer ler hoje?</h1>
+
+    <div class="busca">
+      <span class="icone-busca" aria-hidden="true"></span>
+
+      <input
+        #termoPesquisa
+        type="search"
+        aria-label="Buscar livros"
+        placeholder="Buscar um livro..."
+        (keyup.enter)="pesquisar(termoPesquisa.value)"
+      >
+
+      <button
+        type="button"
+        (click)="pesquisar(termoPesquisa.value)"
+      >
+        Pesquisar
+      </button>
     </div>
   </section>
 
   <section class="conteudo-home" aria-labelledby="generos-titulo">
+
     <h2 id="generos-titulo">Gêneros</h2>
+
     <div class="categorias">
       <button type="button" (click)="irParaLivros('Romance')">Romance</button>
       <button type="button" (click)="irParaLivros('Ficção')">Ficção</button>
@@ -47,35 +51,199 @@
       <p>Descubra novos livros e histórias incríveis.</p>
     </section>
 
-    <div class="titulo-livros">
-      <h2>Livros em destaque</h2>
-      <a routerLink="/livros">Ver todos</a>
-    </div>
+    
+<div class="carrossel">
 
-    <div class="livros-destaque">
-      <button class="livro" type="button" (click)="irParaLivros()">
-        <img
-          src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg"
-          alt="Capa do livro O Pequeno Príncipe"
-        >
-        <span>O Pequeno Príncipe</span>
-      </button>
+  <button
+    type="button"
+    class="seta-carrossel"
+    aria-label="Livros anteriores"
+    (click)="rolarCarrossel(-1)"
+  >
+    &#10094;
+  </button>
 
-      <button class="livro" type="button" (click)="irParaLivros()">
-        <img
-          src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg"
-          alt="Capa do livro Harry Potter"
-        >
-        <span>Harry Potter</span>
-      </button>
+  <div class="livros-destaque" #trilhoLivros>
 
-      <button class="livro" type="button" (click)="irParaLivros()">
-        <img
-          src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg"
-          alt="Capa do livro Dom Casmurro"
-        >
-        <span>Dom Casmurro</span>
-      </button>
-    </div>
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+        src="https://covers.openlibrary.org/b/title/The%20Little%20Prince-L.jpg"
+        alt="Capa do livro O Pequeno Príncipe"
+      >
+      <span>O Pequeno Príncipe</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+        src="https://covers.openlibrary.org/b/title/Harry%20Potter-L.jpg"
+        alt="Capa do livro Harry Potter"
+      >
+      <span>Harry Potter</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+        src="https://covers.openlibrary.org/b/title/Dom%20Casmurro-L.jpg"
+        alt="Capa do livro Dom Casmurro"
+      >
+      <span>Dom Casmurro</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://covers.openlibrary.org/b/title/The%20Hobbit-L.jpg"
+      alt="Capa do livro O Hobbit"
+      >
+      <span>O Hobbit</span>
+    </button>
+
+     <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://covers.openlibrary.org/b/isbn/9780596805524-M.jpg"
+      alt="Capa do livro JavaScript: O Guia Definitivo "
+      >
+      <span>JavaScript: O Guia Definitivo</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://covers.openlibrary.org/b/title/Clean%20Code-L.jpg"
+      alt="Capa do livro Clean Code "
+      >
+      <span>Clean Code</span>
+    </button>
+
+     <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg"
+      alt="Capa do livro Introdução á Algoritmos "
+      >
+      <span>Introdução á Algoritmos</span>
+    </button>
+
+     <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://covers.openlibrary.org/b/title/Sapiens-L.jpg"
+      alt="Capa do livro Sapiens "
+      >
+      <span>Sapiens</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+      alt="Capa do livro Uma Breve História do Tempo "
+      >
+      <span>Uma Breve História do Tempo</span>
+    </button>
+
+   
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfMcZtQhb4u0ra40zHsIEBhbIAvBWu6xMveULGkD1BkflnVcHHe-KpBI&s=10.jpg"
+      alt="Capa do livro Poesias "
+      >
+      <span>Poesias</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEfe9yH7yjzeSKt6Rfal1P7YTJiBV7gPPKveAhkx9ETw&s=10.jpg"
+      alt="Capa do livro Livro do Desassossego "
+      >
+      <span>Livro do Desassossego</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyl2Sx6WeVZVxaPOEXu-wQ8SWrcbGSfSctMEyjyaLYNg&s=10.jpg"
+      alt="Capa do livro O Retrato de Dorian Gray "
+      >
+      <span>O Retrato de Dorian Gray</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://m.media-amazon.com/images/I/9154Q7fv5UL._AC_UF1000,1000_QL80_.jpg"
+      alt="Capa do livro O Morro dos Ventos Uivantes"
+      >
+      <span>O Morro dos Ventos Uivantes</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvFzOYgkFUXb-qgQAnWVC9xcA_jS_pCjoXiQVi3Q62gA&s.jpg"
+      alt="Capa do livro Pais e Filhos"
+      >
+      <span>Pais e Filhos</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHzivOLxiGF9cUVTJRl2lWhkZrqQphRMs9hT-xMAR_Q&s=10.jpg"
+      alt="Capa do livro Pedro Páramo"
+      >
+      <span>Pedro Páramo</span>
+    </button>
+
+     <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWKfZeCsB-JM36dg1tI8nZpnlAHiKeeBlNA3suYMd1Oa0Wcxh6vYu3igI-&s=10.jpg"
+      alt="Capa do livro Anna Kariênina"
+      >
+      <span>Anna Kariênina</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSGXeGDKKq5WHWLYnBVeNXgMgXgs-M7GxKfAj3cS1ZlA&s=10.jpg"
+      alt="Capa do livro O Diabo e Outras Histórias"
+      >
+      <span>O Diabo e Outras Histórias</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTgBdo5gSmw-aAVRZ-IbrffCTF4zS2NcbgifyuKZxoQ&s=10.jpg"
+      alt="Capa do livro Cem Anos de Solidão "
+      >
+      <span>Cem Anos de Solidão</span>
+    </button>
+
+    <button class="livro" type="button" (click)="irParaLivros()">
+      <img
+      src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9VVNeMvlOSlub9IvxJUGscHbUbxeqLJdF6jOWNA7xA&s=10.jpg"
+      alt="Capa do livro The Outsider "
+      >
+      <span>The Outsider</span>
+    </button>
+
+    
+
+
+    
+    
+
+
+
+
+
+
+
+
+    
+  </div>
+
+  <button
+    type="button"
+    class="seta-carrossel"
+    aria-label="Próximos livros"
+    (click)="rolarCarrossel(1)"
+  >
+    &#10095;
+  </button>
+
+</div>
+
   </section>
 </div>

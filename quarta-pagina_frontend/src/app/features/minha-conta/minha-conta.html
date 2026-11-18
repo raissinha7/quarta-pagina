@@ -1,32 +1,210 @@
-<div class="pagina-conta">
-  <div class="cartao-conta">
-    <div class="avatar">👤</div>
 
-    <h1>Minha conta</h1>
-    <p class="subtitulo">Seus dados pessoais</p>
+<div class="pagina-conta">
+
+  <div class="cartao-conta">
+
+    <div class="perfil-topo">
+
+      <div class="foto-container">
+
+        @if (usuario?.foto) {
+          <img
+            [src]="usuario.foto"
+            alt="Foto de perfil"
+            class="foto-perfil"
+          >
+        } @else {
+          <div class="avatar">👤</div>
+        }
+
+        <label for="foto" class="botao-foto">
+          <i class="fas fa-camera"></i>
+        </label>
+
+        <input
+          type="file"
+          id="foto"
+          accept="image/*"
+          (change)="selecionarFoto($event)"
+          hidden
+        >
+
+      </div>
+
+      <h1>Minha conta</h1>
+      <p class="subtitulo">Gerencie seus dados pessoais</p>
+
+    </div>
 
     @if (usuario) {
-      <div class="campo">
-        <label>Nome completo</label>
-        <p>{{ usuario.nome }}</p>
+
+      @if (!editando) {
+
+        <div class="campo">
+          <label>Nome completo</label>
+          <p>{{ usuario.nome }}</p>
+        </div>
+
+        <div class="campo">
+          <label>E-mail</label>
+          <p>{{ usuario.email }}</p>
+        </div>
+
+        <div class="campo">
+          <label>Endereço</label>
+          <p>{{ usuario.endereco || 'Endereço não informado' }}</p>
+        </div>
+
+        <button
+          type="button"
+          class="botao-principal"
+          (click)="editarPerfil()"
+        >
+          <i class="fas fa-user-edit"></i>
+          Editar perfil
+        </button>
+
+      } @else {
+
+        <div class="formulario-edicao">
+
+          <h2>Editar meus dados</h2>
+
+          <label for="nome">Nome completo</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            [(ngModel)]="nome"
+            placeholder="Digite seu nome"
+          >
+
+          <label>E-mail</label>
+          <input
+            type="email"
+            [value]="usuario.email"
+            disabled
+          >
+
+          <label for="endereco">Endereço</label>
+          <input
+            type="text"
+            id="endereco"
+            name="endereco"
+            [(ngModel)]="endereco"
+            placeholder="Digite seu endereço"
+          >
+
+          <button
+            type="button"
+            class="botao-principal"
+            (click)="salvarPerfil()"
+          >
+            Salvar alterações
+          </button>
+
+          <button
+            type="button"
+            class="botao-cancelar"
+            (click)="cancelarEdicao()"
+          >
+            Cancelar
+          </button>
+
+        </div>
+
+      }
+
+      <div class="secao-senha">
+
+        <h2>Segurança</h2>
+
+        @if (!alterandoSenha) {
+
+          <p>Deseja atualizar sua senha?</p>
+
+          <button
+            type="button"
+            class="botao-secundario"
+            (click)="abrirAlteracaoSenha()"
+          >
+            <i class="fas fa-lock"></i>
+            Alterar senha
+          </button>
+
+        } @else {
+
+          <label for="senhaAtual">Senha atual</label>
+          <input
+            type="password"
+            id="senhaAtual"
+            name="senhaAtual"
+            [(ngModel)]="senhaAtual"
+            placeholder="Digite sua senha atual"
+          >
+
+          <label for="novaSenha">Nova senha</label>
+          <input
+            type="password"
+            id="novaSenha"
+            name="novaSenha"
+            [(ngModel)]="novaSenha"
+            placeholder="Digite a nova senha"
+          >
+
+          <label for="confirmarSenha">Confirmar nova senha</label>
+          <input
+            type="password"
+            id="confirmarSenha"
+            name="confirmarSenha"
+            [(ngModel)]="confirmarSenha"
+            placeholder="Confirme sua nova senha"
+          >
+
+          <button
+            type="button"
+            class="botao-principal"
+            (click)="alterarSenha()"
+          >
+            Salvar nova senha
+          </button>
+
+          <button
+            type="button"
+            class="botao-cancelar"
+            (click)="cancelarAlteracaoSenha()"
+          >
+            Cancelar
+          </button>
+
+        }
+
       </div>
 
-      <div class="campo">
-        <label>E-mail</label>
-        <p>{{ usuario.email }}</p>
-      </div>
-
-      <div class="campo">
-        <label>Endereço</label>
-        <p>{{ usuario.endereco || 'Endereço não informado' }}</p>
-      </div>
     } @else {
+
       <p>Não encontramos os dados do cadastro.</p>
+
     }
 
-    <a routerLink="/home" class="botao-voltar">Voltar ao início</a>
-    <button type="button" class="botao-sair" (click)="sair()">
-      Sair da conta
-    </button>
+    <div class="acoes-conta">
+
+      <a routerLink="/home" class="botao-voltar">
+        <i class="fas fa-home"></i>
+        Voltar ao início
+      </a>
+
+      <button
+        type="button"
+        class="botao-sair"
+        (click)="sair()"
+      >
+        <i class="fas fa-sign-out-alt"></i>
+        Sair da conta
+      </button>
+
+    </div>
+
   </div>
+
 </div>

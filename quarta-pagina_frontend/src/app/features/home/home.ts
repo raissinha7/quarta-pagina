@@ -1,5 +1,5 @@
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild, ElementRef } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -10,6 +10,9 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class Home {
   private router = inject(Router);
+
+  @ViewChild('trilhoLivros')
+  trilhoLivros!: ElementRef<HTMLDivElement>;
 
   irParaLivros(genero?: string) {
     this.router.navigate(['/livros'], {
@@ -25,5 +28,12 @@ export class Home {
         queryParams: { busca }
       });
     }
+  }
+
+  rolarCarrossel(direcao: number) {
+    this.trilhoLivros.nativeElement.scrollBy({
+      left: direcao * 400,
+      behavior: 'smooth'
+    });
   }
 }

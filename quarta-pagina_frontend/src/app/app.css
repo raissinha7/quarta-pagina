@@ -1,25 +1,48 @@
-* {
-  box-sizing: border-box;
-}
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-body {
+.rodape {
+  background: #0f4c5c;
+  color: white;
+  padding: 40px 7% 18px;
   font-family: Arial, sans-serif;
-  background: #b6edf7;
+  margin-top: 50px;
 }
 
-button,
-input,
-textarea {
-  font-family: inherit;
+.rodape-conteudo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-a {
-  cursor: pointer;
+.rodape h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.rodape h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.rodape p {
+  color: #e0edef;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.rodape-final {
+  border-top: 1px solid rgba(255,255,255,.2);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 18px;
+  font-size: 12px;
+  color: #d5e5e8;
+}
+
+@media (max-width: 600px) {
+  .rodape-conteudo {
+    flex-direction: column;
+  }
 }

@@ -1,201 +1,182 @@
+
 .home {
   min-height: 100vh;
-  padding: 22px clamp(18px, 4vw, 56px) 40px;
+  padding: 28px 26px 40px;
   background: #f4f9fa;
   color: #12343d;
   font-family: Arial, sans-serif;
 }
 
-.hero {
-  position: relative;
+/* APRESENTAÇÃO */
+
+.apresentacao {
+  width: 100%;
+  margin: 0 auto 28px;
+}
+
+.biblioteca {
   display: flex;
   align-items: center;
-  min-height: 340px;
-  max-width: 1280px;
-  margin: 0 auto 32px;
-  padding: clamp(28px, 6vw, 72px);
-  overflow: hidden;
-  border-radius: 20px;
-  background: linear-gradient(110deg, #0f4c5c, #176b7d);
-  color: #fff;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
-.hero-conteudo {
-  position: relative;
-  z-index: 1;
-  width: min(560px, 62%);
+.biblioteca h2 {
+  margin: 0;
+  color: #0f4c5c;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-.hero h1 {
+.biblioteca svg {
+  display: none;
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: #0f4c5c;
+  stroke-width: 1.8;
+}
+
+.saudacao {
   margin: 0 0 14px;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.1;
+  font-size: 16px;
+  color: #12343d;
 }
 
-.hero p {
-  margin: 0 0 22px;
-  color: #e5f2f4;
-  font-size: 16px;
+.apresentacao h1 {
+  margin: 0 0 20px;
+  color: #083b49;
+  font-size: 32px;
+  font-weight: 700;
 }
+
+/* PESQUISA */
 
 .busca {
   display: flex;
   align-items: center;
-  width: min(100%, 440px);
-  min-height: 48px;
-  padding: 5px 8px 5px 18px;
+  gap: 15px;
+  width: 100%;
+  min-height: 60px;
+  padding: 8px 10px 8px 20px;
   border: 1px solid #d8e7ea;
-  border-radius: 28px;
+  border-radius: 17px;
   background: #fff;
-  box-shadow: 0 5px 18px rgba(8, 59, 73, .18);
+  box-shadow: 0 5px 18px rgba(15, 76, 92, .08);
 }
 
-.busca:focus-within {
-  outline: 3px solid rgba(229, 242, 244, .6);
+.icone-busca {
+  font-size: 19px;
 }
 
 .busca input {
   flex: 1;
   min-width: 0;
-  padding: 9px 5px;
-  border: 0;
-  outline: 0;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
   background: transparent;
   color: #083b49;
-  font: inherit;
+  font-size: 15px;
 }
 
 .busca input::placeholder {
-  color: #71878c;
+  color: #849ba0;
 }
 
 .busca button {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: #0f4c5c;
+  min-width: 114px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 11px;
+  background: #0f4c5c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
+  transition: .2s;
 }
 
 .busca button:hover {
-  background: #e5f2f4;
+  background: #176b7d;
 }
 
-.busca button svg {
-  width: 22px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-width: 2;
-}
-
-.hero-ilustracao {
-  position: absolute;
-  inset: 0 0 0 auto;
-  width: 47%;
-  pointer-events: none;
-}
-
-.livro-ilustrado {
-  position: absolute;
-  right: -3%;
-  width: 92%;
-  height: 76px;
-  border: 5px solid rgba(255, 255, 255, .18);
-  border-left-width: 12px;
-  border-radius: 7px 12px 12px 7px;
-  box-shadow: 0 12px 22px rgba(8, 40, 49, .24);
-}
-
-.livro-fundo {
-  top: 43%;
-  background: linear-gradient(#176b7d 0 14%, #e5f2f4 15% 82%, #9ec4cb 83%);
-  transform: rotate(4deg);
-}
-
-.livro-meio {
-  top: 62%;
-  right: 3%;
-  background: linear-gradient(#9ec4cb 0 15%, #f4f9fa 16% 84%, #6f9da5 85%);
-  transform: rotate(-2deg);
-}
-
-.livro-frente {
-  top: 81%;
-  right: -7%;
-  background: linear-gradient(#0f4c5c 0 14%, #d8e7ea 15% 84%, #176b7d 85%);
-  transform: rotate(3deg);
-}
+/* CONTEÚDO */
 
 .conteudo-home {
-  max-width: 1120px;
+  width: 100%;
   margin: 0 auto;
 }
 
-.conteudo-home > h2,
-.titulo-livros h2 {
-  margin: 0 0 15px;
+.conteudo-home > h2 {
+  margin: 0 0 14px;
   color: #083b49;
   font-size: 20px;
 }
 
+/* GÊNEROS */
+
 .categorias {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 30px;
+  gap: 0;
+  margin-bottom: 0;
 }
 
 .categorias button {
-  padding: 10px 18px;
+  padding: 10px 17px;
   border: 1px solid #d2e4e7;
   border-radius: 25px;
   background: #fff;
   color: #0f4c5c;
-  cursor: pointer;
+  font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
   transition: .2s;
 }
 
 .categorias button:hover {
-  border-color: #0f4c5c;
   background: #0f4c5c;
   color: #fff;
-  transform: translateY(-2px);
+  border-color: #0f4c5c;
 }
 
+/* BANNER */
+
 .banner {
-  margin-bottom: 32px;
-  padding: 24px 28px;
-  border: 1px solid #d2e4e7;
-  border-radius: 18px;
-  background: #e5f2f4;
+  margin: 0 0 48px;
+  padding: 27px;
+  border-radius: 20px;
+  background: linear-gradient(110deg, #0f4c5c, #176b7d);
+  box-shadow: 0 8px 20px rgba(15, 76, 92, .13);
 }
 
 .banner h2 {
-  margin: 0 0 8px;
-  color: #083b49;
-  font-size: 21px;
+  margin: 0 0 13px;
+  color: #fff;
+  font-size: 23px;
 }
 
 .banner p {
   margin: 0;
-  color: #45666e;
+  color: #e5f2f4;
+  font-size: 15px;
 }
+
+/* LIVROS EM DESTAQUE */
 
 .titulo-livros {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-top: 20px;
+  margin-bottom: 18px;
 }
 
 .titulo-livros h2 {
   margin: 0;
+  color: #083b49;
+  font-size: 20px;
 }
 
 .titulo-livros a {
@@ -211,18 +192,21 @@
 
 .livros-destaque {
   display: flex;
-  gap: 18px;
-  overflow-x: auto;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 5px 5px 20px;
 }
 
 .livro {
-  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 175px;
   padding: 11px;
   border: 1px solid #e0edef;
-  border-radius: 16px;
+  border-radius: 17px;
   background: #fff;
-  box-shadow: 0 5px 16px rgba(15, 76, 92, .1);
+  box-shadow: 0 5px 16px rgba(15, 76, 92, .10);
   color: #083b49;
   cursor: pointer;
   text-align: left;
@@ -236,56 +220,71 @@
 
 .livro img {
   width: 100%;
-  height: 195px;
+  height: 192px;
   border-radius: 11px;
   object-fit: cover;
 }
 
 .livro span {
   display: block;
-  margin: 11px 3px 4px;
+  margin: 13px 3px 4px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.categorias button:focus-visible,
-.livro:focus-visible,
-.titulo-livros a:focus-visible {
+/* ACESSIBILIDADE */
+
+button:focus-visible,
+a:focus-visible {
   outline: 3px solid #176b7d;
   outline-offset: 3px;
 }
 
+/* RESPONSIVIDADE */
+
 @media (max-width: 650px) {
   .home {
-    padding: 16px 14px 30px;
+    padding: 20px 14px 30px;
   }
 
-  .hero {
-    min-height: 310px;
-    padding: 28px 22px;
+  .biblioteca {
+    margin-bottom: 30px;
   }
 
-  .hero-conteudo {
-    width: 100%;
+  .apresentacao h1 {
+    font-size: 25px;
   }
 
-  .hero h1 {
-    font-size: 34px;
+  .busca {
+    gap: 8px;
+    padding-left: 12px;
   }
 
-  .hero p {
-    max-width: 290px;
-    font-size: 14px;
+  .busca button {
+    min-width: auto;
+    padding: 12px;
   }
 
-  .hero-ilustracao {
-    right: -25%;
-    width: 75%;
-    opacity: .42;
+  .categorias {
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .categorias button {
+    padding: 9px 13px;
+    font-size: 13px;
   }
 
   .banner {
-    padding: 20px;
+    padding: 22px;
+  }
+
+  .banner h2 {
+    font-size: 20px;
+  }
+
+  .livros-destaque {
+    gap: 12px;
   }
 
   .livro {
@@ -293,6 +292,80 @@
   }
 
   .livro img {
-    height: 180px;
+    height: 175px;
+  }
+}
+
+/* CARROSSEL DE LIVROS */
+
+.carrossel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-width: 0;
+}
+
+.livros-destaque {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 10px 5px 20px;
+}
+
+.livros-destaque::-webkit-scrollbar {
+  display: none;
+}
+
+.livro {
+  flex: 0 0 175px;
+  scroll-snap-align: start;
+}
+
+.seta-carrossel {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #0f4c5c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.seta-carrossel:hover {
+  background: #176b7d;
+  transform: scale(1.08);
+}
+
+/* RESPONSIVIDADE DO CARROSSEL */
+
+@media (max-width: 650px) {
+  .carrossel {
+    gap: 7px;
+  }
+
+  .seta-carrossel {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .livros-destaque {
+    gap: 12px;
+  }
+
+  .livro {
+    flex-basis: 145px;
   }
 }

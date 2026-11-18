@@ -1,99 +1,164 @@
-.auth-container {
+
+/* PÁGINA DE CADASTRO */
+
+.login-page {
   min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #183b47;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f8fb;
-  padding: 20px;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
-.auth-card {
+.login {
   width: 100%;
-  max-width: 420px;
-  background-color: white;
-  padding: 35px 40px;
-  border-radius: 14px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
-}
-
-/* Título */
-.auth-card h1 {
+  max-width: 380px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 28px;
-  margin: 0 0 25px;
-  color: #34495e;
 }
 
-.auth-card h2 {
-  font-size: 21px;
+/* LOGO */
+
+.logo-login {
+  display: block;
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+/* TÍTULOS */
+
+.login h1 {
+  font-size: 30px;
   margin: 0 0 8px;
-  color: #3d4d5d;
+  color: #183b47;
+  text-align: center;
 }
 
-.auth-card p {
+.subtitulo {
   font-size: 14px;
   color: #777;
-  margin: 0 0 20px;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
-/* Campos */
-.auth-card input {
-  width: 100%;
-  height: 42px;
-  padding: 0 13px;
-  margin-bottom: 13px;
+/* FORMULÁRIO */
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  color: #183b47;
+  text-align: left;
+}
+
+/* CAMPOS */
+
+.campo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f5f5;
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-bottom: 20px;
   box-sizing: border-box;
+}
 
-  border: 1px solid #d9dfe5;
-  border-radius: 7px;
+.campo span {
+  font-size: 16px;
+}
+
+.campo input {
+  width: 100%;
+  height: 100%;
+  border: none;
   outline: none;
-
+  background: transparent;
   font-size: 14px;
   color: #333;
-  background-color: #fafafa;
 }
 
-.auth-card input:focus {
-  border-color: #7f9db5;
-  background-color: white;
+.campo input::placeholder {
+  color: #999;
 }
 
-/* Botão */
-.auth-card button {
+/* BOTÃO CADASTRAR */
+
+.btn-entrar {
   width: 100%;
-  height: 42px;
-  margin-top: 5px;
-
+  height: 50px;
   border: none;
-  border-radius: 7px;
-
-  background-color: #6f91ad;
+  border-radius: 9px;
+  background: #155564;
   color: white;
-
-  font-size: 14px;
-  font-weight: 600;
-
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
-.auth-card button:hover {
-  background-color: #5d7f9b;
+.btn-entrar:hover {
+  background: #104653;
 }
 
-/* Texto inferior */
-.auth-card p:last-child {
+/* TEXTO INFERIOR */
+
+.cadastro {
   text-align: center;
-  margin: 20px 0 0;
+  margin-top: 30px;
+  color: #777;
+  font-size: 12px;
 }
 
-.auth-card a {
-  color: #6f91ad;
-  font-weight: 600;
+.cadastro a {
+  color: #155564;
+  font-weight: bold;
   text-decoration: none;
+  margin-left: 5px;
 }
 
-.auth-card a:hover {
+.cadastro a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 25px 20px;
+  }
+
+  .login {
+    max-width: 100%;
+  }
+}
+.cadastro button {
+  border: none;
+  background: none;
+  color: #155564;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.cadastro button:hover {
   text-decoration: underline;
 }

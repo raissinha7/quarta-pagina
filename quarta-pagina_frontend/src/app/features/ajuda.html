@@ -1,0 +1,54 @@
+
+<div class="pagina-ajuda">
+
+  <section class="topo-ajuda">
+    <div class="icone-ajuda">?</div>
+
+    <h1>Central de Ajuda</h1>
+
+    <p>Como podemos ajudar você?</p>
+
+    <div class="busca-ajuda">
+      <span>⌕</span>
+
+      <input
+        type="search"
+        placeholder="Buscar uma dúvida..."
+        [(ngModel)]="pesquisa"
+      >
+    </div>
+  </section>
+
+  <section class="conteudo-ajuda">
+
+    <h2>Perguntas frequentes</h2>
+
+    <div class="lista-perguntas">
+
+      @for (item of perguntasFiltradas; track item.pergunta) {
+        <details class="pergunta">
+          <summary>{{ item.pergunta }}</summary>
+          <p>{{ item.resposta }}</p>
+        </details>
+      } @empty {
+        <p class="sem-resultados">
+          Não encontramos nenhuma dúvida com esse nome.
+        </p>
+      }
+
+    </div>
+
+    <section class="contato-ajuda">
+      <div class="icone-contato">✉</div>
+
+      <h2>Ainda precisa de ajuda?</h2>
+
+      <p>
+        Procure a equipe da biblioteca para receber
+        orientação sobre nossos serviços.
+      </p>
+    </section>
+
+  </section>
+
+</div>
