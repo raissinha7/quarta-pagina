@@ -14,6 +14,7 @@ import { FinalizarEmprestimo } from './emprestimos/finalizar-emprestimo/finaliza
 import { MinhaConta } from './features/minha-conta/minha-conta';
 import { RecuperarSenha } from './features/recuperar-senha/recuperar-senha';
 import { Ajuda } from './features/ajuda';
+import { QuemSomosComponent } from './quem-somos/quem-somos';
 
 export const routes: Routes = [
   {
@@ -73,6 +74,10 @@ export const routes: Routes = [
   {
   path: 'ajuda',
   component: Ajuda
+},
+{
+  path: 'quem-somos',
+  component: QuemSomosComponent
 },
   {
     path: '**',

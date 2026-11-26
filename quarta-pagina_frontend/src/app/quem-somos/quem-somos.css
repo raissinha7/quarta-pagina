@@ -1,0 +1,283 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #183b47;
+  background: #f4faff;
+}
+
+.quem-somos {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 60px 70px;
+  box-sizing: border-box;
+}
+
+/* Apresentação */
+
+.apresentacao-quem-somos {
+  text-align: center;
+  padding: 75px 20px 85px;
+  background: #e6f3f8;
+  border-radius: 24px;
+}
+
+.subtitulo {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #628a98;
+}
+
+.apresentacao-quem-somos h1 {
+  font-size: 48px;
+  margin: 22px 0;
+  color: #164f5c;
+}
+
+.introducao {
+  max-width: 650px;
+  margin: auto;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #526c77;
+}
+
+/* Elemento decorativo */
+
+.decoracao-livros {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 7px;
+  height: 45px;
+  margin-top: 35px;
+}
+
+.decoracao-livros span {
+  width: 13px;
+  border-radius: 4px 4px 2px 2px;
+  background: #164f5c;
+}
+
+.decoracao-livros span:nth-child(1) {
+  height: 30px;
+  background: #8fb9c8;
+}
+
+.decoracao-livros span:nth-child(2) {
+  height: 42px;
+  background: #164f5c;
+}
+
+.decoracao-livros span:nth-child(3) {
+  height: 35px;
+  background: #b4d2df;
+}
+
+/* Sobre o projeto */
+
+.sobre-projeto {
+  padding: 95px 45px;
+}
+
+.identificador {
+  color: #7b9eaa;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.texto-sobre h2,
+.bloco-proposito h2 {
+  color: #164f5c;
+  font-size: 34px;
+  line-height: 1.35;
+  margin: 22px 0;
+}
+
+.texto-sobre p,
+.bloco-proposito p,
+.card-info p {
+  color: #607681;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 750px;
+}
+
+/* Propósito */
+
+.proposito {
+  padding: 60px;
+  border-radius: 20px;
+  background: #164f5c;
+}
+
+.bloco-proposito .identificador {
+  color: #a8cbd7;
+}
+
+.bloco-proposito h2 {
+  color: #ffffff;
+}
+
+.bloco-proposito p {
+  color: #d4e5eb;
+}
+
+/* Missão e visão */
+
+.missao-visao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 85px 0;
+}
+
+.card-info {
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e3edf2;
+  border-radius: 18px;
+}
+
+.card-info h2 {
+  color: #164f5c;
+  font-size: 25px;
+  margin: 20px 0 15px;
+}
+
+/* Valores */
+
+.valores {
+  padding: 25px 0 85px;
+}
+
+.valores > h2 {
+  color: #164f5c;
+  font-size: 32px;
+  margin: 20px 0 35px;
+}
+
+.lista-valores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.valor {
+  padding: 25px 20px;
+  border-top: 2px solid #b7d4df;
+}
+
+.valor h3 {
+  color: #164f5c;
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.valor p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #718792;
+}
+
+/* Frase final */
+
+.frase-final {
+  text-align: center;
+  padding: 55px 25px;
+  border-top: 1px solid #dceaf0;
+}
+
+.aspas {
+  font-family: Georgia, serif;
+  font-size: 65px;
+  height: 50px;
+  color: #9bbdca;
+}
+
+.frase-final p {
+  font-family: Georgia, serif;
+  color: #164f5c;
+  font-size: 25px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.frase-final span {
+  display: block;
+  margin-top: 25px;
+  color: #8aa8b5;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+  .quem-somos {
+    padding: 30px;
+  }
+
+  .lista-valores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .missao-visao {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .quem-somos {
+    padding: 18px;
+  }
+
+  .apresentacao-quem-somos {
+    padding: 55px 20px;
+  }
+
+  .apresentacao-quem-somos h1 {
+    font-size: 36px;
+  }
+
+  .introducao {
+    font-size: 15px;
+  }
+
+  .sobre-projeto {
+    padding: 55px 10px;
+  }
+
+  .texto-sobre h2,
+  .bloco-proposito h2 {
+    font-size: 27px;
+  }
+
+  .proposito {
+    padding: 35px 25px;
+  }
+
+  .missao-visao {
+    grid-template-columns: 1fr;
+    padding: 55px 0;
+  }
+
+  .card-info {
+    padding: 28px;
+  }
+
+  .lista-valores {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .valor {
+    padding: 20px 12px;
+  }
+
+  .frase-final p {
+    font-size: 21px;
+  }
+}

@@ -1,7 +1,5 @@
-
 :host {
   display: block;
-  min-height: 100vh;
   background: #f4f9fa;
   font-family: Arial, sans-serif;
   color: #183b47;
@@ -9,22 +7,25 @@
 
 .pagina {
   width: 100%;
-  max-width: none;
   margin: 0;
-  padding: 10px 52px 50px;
+  padding: 50px 20px;
   box-sizing: border-box;
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 {
-  margin: 0 0 12px;
-  color: #183b47;
+/* Título */
+.pagina h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 30px;
+  color: #0f4c5c;
   font-size: 36px;
   font-weight: 700;
 }
 
+/* Subtítulos */
 h2 {
   color: #183b47;
   font-size: 22px;
@@ -35,12 +36,13 @@ p {
   color: #71818e;
 }
 
+/* Cards */
 .vazio,
 .lista,
 .dados-retirada {
   width: 100%;
-  max-width: 600px;
-  margin: 70px auto 30px;
+  max-width: 830px;
+  margin: 0 auto 25px;
   padding: 40px;
   box-sizing: border-box;
   background: #fff;
@@ -48,6 +50,7 @@ p {
   box-shadow: 0 8px 25px rgba(24, 59, 71, 0.08);
 }
 
+/* Página sem livros selecionados */
 .vazio {
   text-align: center;
 }
@@ -70,8 +73,9 @@ p {
   text-decoration: underline;
 }
 
+/* Lista de livros */
 .lista {
-  margin-top: 25px;
+  margin-top: 0;
 }
 
 .livro {
@@ -98,8 +102,9 @@ p {
   margin-bottom: 8px;
 }
 
+/* Dados de retirada */
 .dados-retirada {
-  margin-top: 25px;
+  margin-top: 0;
 }
 
 .dados-retirada label {
@@ -119,10 +124,11 @@ p {
   box-sizing: border-box;
 }
 
+/* Botões */
 .confirmar,
 .voltar {
   display: block;
-  margin: 20px auto;
+  margin: 15px auto;
   padding: 13px 25px;
   border: none;
   border-radius: 9px;
@@ -145,12 +151,13 @@ p {
   color: #07566b;
 }
 
+/* Celular */
 @media (max-width: 650px) {
   .pagina {
-    padding: 15px 20px 40px;
+    padding: 35px 20px;
   }
 
-  h1 {
+  .pagina h1 {
     font-size: 28px;
   }
 
